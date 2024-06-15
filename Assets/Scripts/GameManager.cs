@@ -1,49 +1,47 @@
 using System;
+using System.Collections.Generic;
 using UnityEngine;
 
-namespace DefaultNamespace
+public class GameManager : MonoBehaviour
 {
-    public class GameManager : MonoBehaviour
+    [SerializeField] PlayerManager _playerManager;
+
+    static GameManager _instance;
+    public static GameManager Instance
     {
-        [SerializeField] PlayerManager _playerManager;
-
-        static GameManager _instance;
-        public static GameManager Instance
+        get
         {
-            get
+            if (_instance == null)
             {
-                if (_instance == null)
-                {
-                    _instance = FindObjectOfType<GameManager>();
-                }
-
-                return _instance;
+                _instance = FindObjectOfType<GameManager>();
             }
 
-            private set
-            {
-                _instance = value;
-            }
+            return _instance;
         }
 
-        public event Action OnGameStarted;
-
-        public PlayerManager PlayerManager => _playerManager;
-
-        bool _isRunning;
-
-        void Awake()
+        private set
         {
-            _instance = this;
+            _instance = value;
         }
+    }
 
-        void Update()
-        {
-            if (_isRunning || _playerManager.Players.Count == 0) return;
+    public event Action OnGameStarted;
 
-            OnGameStarted?.Invoke();
-            _isRunning = true;
-            Debug.Log("Game started!");
-        }
+    public List<GameObject> Players => _playerManager.Players;
+
+    bool _isRunning;
+
+    void Awake()
+    {
+        _instance = this;
+    }
+
+    void Update()
+    {
+        if (_isRunning || _playerManager.Players.Count == 0) return;
+
+        OnGameStarted?.Invoke();
+        _isRunning = true;
+        Debug.Log("Game started!");
     }
 }
