@@ -7,11 +7,35 @@ namespace DefaultNamespace
     {
         [SerializeField] PlayerManager _playerManager;
 
+        static GameManager _instance;
+        public static GameManager Instance
+        {
+            get
+            {
+                if (_instance == null)
+                {
+                    _instance = FindObjectOfType<GameManager>();
+                }
+
+                return _instance;
+            }
+
+            private set
+            {
+                _instance = value;
+            }
+        }
+
         public event Action OnGameStarted;
 
         public PlayerManager PlayerManager => _playerManager;
 
         bool _isRunning;
+
+        void Awake()
+        {
+            _instance = this;
+        }
 
         void Update()
         {
