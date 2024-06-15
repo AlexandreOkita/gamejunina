@@ -1,6 +1,6 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!1001 &4366207904559181581
+--- !u!1001 &2546304616170743597
 PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
@@ -48,33 +48,73 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4273919985618651623, guid: eb4c32e600aae4b05a474384ef25f564, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: -2413806693520163455, guid: a86470a33a6bf42c4b3595704624658b, type: 3}
+    - target: {fileID: 4273919985618651623, guid: eb4c32e600aae4b05a474384ef25f564, type: 3}
+      propertyPath: m_Color.b
+      value: 0.11552234
+      objectReference: {fileID: 0}
+    - target: {fileID: 4273919985618651623, guid: eb4c32e600aae4b05a474384ef25f564, type: 3}
+      propertyPath: m_Color.g
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4273919985618651623, guid: eb4c32e600aae4b05a474384ef25f564, type: 3}
+      propertyPath: m_Color.r
+      value: 0.8207547
+      objectReference: {fileID: 0}
     - target: {fileID: 4571727327928719484, guid: eb4c32e600aae4b05a474384ef25f564, type: 3}
       propertyPath: m_Name
-      value: ProjectileCapsule
+      value: ProjectileCircle
+      objectReference: {fileID: 0}
+    - target: {fileID: 5032107089298473117, guid: eb4c32e600aae4b05a474384ef25f564, type: 3}
+      propertyPath: m_Size.x
+      value: 0.2
       objectReference: {fileID: 0}
     - target: {fileID: 5032107089298473117, guid: eb4c32e600aae4b05a474384ef25f564, type: 3}
       propertyPath: m_Size.y
-      value: 2
+      value: 0.2
       objectReference: {fileID: 0}
     - target: {fileID: 5032107089298473117, guid: eb4c32e600aae4b05a474384ef25f564, type: 3}
       propertyPath: m_Sprite
       value: 
-      objectReference: {fileID: -9095717837082945937, guid: 207ee8102dd4143d288186ef0be518ee, type: 3}
+      objectReference: {fileID: -2413806693520163455, guid: ebe73ca9363db456bacf42c025bb4847, type: 3}
+    - target: {fileID: 5032107089298473117, guid: eb4c32e600aae4b05a474384ef25f564, type: 3}
+      propertyPath: m_Color.b
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5032107089298473117, guid: eb4c32e600aae4b05a474384ef25f564, type: 3}
+      propertyPath: m_Color.g
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5032107089298473117, guid: eb4c32e600aae4b05a474384ef25f564, type: 3}
+      propertyPath: m_Color.r
+      value: 0.8773585
+      objectReference: {fileID: 0}
     - target: {fileID: 5032107089298473117, guid: eb4c32e600aae4b05a474384ef25f564, type: 3}
       propertyPath: m_WasSpriteAssigned
       value: 1
       objectReference: {fileID: 0}
-    - target: {fileID: 7838434160424782943, guid: eb4c32e600aae4b05a474384ef25f564, type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 0.7071068
+    - target: {fileID: 6818224666558363628, guid: eb4c32e600aae4b05a474384ef25f564, type: 3}
+      propertyPath: velocidade
+      value: 10
       objectReference: {fileID: 0}
-    - target: {fileID: 7838434160424782943, guid: eb4c32e600aae4b05a474384ef25f564, type: 3}
-      propertyPath: m_LocalRotation.z
-      value: -0.7071068
+    - target: {fileID: 7299973858523194273, guid: eb4c32e600aae4b05a474384ef25f564, type: 3}
+      propertyPath: m_Size.x
+      value: 1
       objectReference: {fileID: 0}
-    - target: {fileID: 7838434160424782943, guid: eb4c32e600aae4b05a474384ef25f564, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: -90
+    - target: {fileID: 7299973858523194273, guid: eb4c32e600aae4b05a474384ef25f564, type: 3}
+      propertyPath: m_Size.y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7299973858523194273, guid: eb4c32e600aae4b05a474384ef25f564, type: 3}
+      propertyPath: m_Offset.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7299973858523194273, guid: eb4c32e600aae4b05a474384ef25f564, type: 3}
+      propertyPath: m_Offset.y
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
