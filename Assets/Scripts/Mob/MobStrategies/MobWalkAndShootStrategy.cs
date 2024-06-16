@@ -4,9 +4,12 @@ using UnityEngine;
 
 public class NewBehaviourScript : MonoBehaviour
 {
+    static int SPEED_PARAMETER_HASH = Animator.StringToHash("Speed");
+
     [SerializeField] private float speed = 0.5f;
     [SerializeField] private float attackRange = 5f;
     [SerializeField] private AttackBase weapon;
+    [SerializeField] Animator _animator;
 
     private List<Transform> players;
 
@@ -59,15 +62,23 @@ public class NewBehaviourScript : MonoBehaviour
 
     private void MoveTowards(Transform target)
     {
-        Vector3 direction = (target.position - transform.position).normalized;
+        Vector3 delta = (target.position - transform.position);
+        Vector3 direction = delta.normalized;
         transform.position += direction * speed * Time.deltaTime;
-        transform.right = direction;
+        weapon.transform.right = direction;
+
+        _animator.SetFloat(SPEED_PARAMETER_HASH, delta.magnitude);
+
+        if (delta.magnitude > 0.05f)
+        {
+            _animator.gameObject.transform.right = Vector2.Dot(delta, Vector2.right) * Vector2.right;
+        }
     }
 
     private void Attack(Transform target)
     {
         Vector3 direction = (target.position - transform.position).normalized;
-        transform.right = direction;
+        weapon.transform.right = direction;
         weapon.TryAttack();
     }
 }
