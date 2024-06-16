@@ -16,5 +16,6 @@ public enum UpgradeType
 {
     HEALTH,
     DAMAGE,
-    ATTACK_SPEED
+    ATTACK_SPEED,
+    TRIPLE_WEAPON
 }

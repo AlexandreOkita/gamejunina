@@ -33,6 +33,11 @@ public class PlayerController : MonoBehaviour
         _movement.SetupBounds(playerBounds);
     }
 
+    public void UpdateWeapon(AttackBase weapon)
+    {
+        _playerAim.UpdateAttack(weapon);
+    }
+
     public void OnAttack(InputValue value)
     {
         _playerAim.CurrentAttack.TryAttack(attackSpeedMod, attackMod);

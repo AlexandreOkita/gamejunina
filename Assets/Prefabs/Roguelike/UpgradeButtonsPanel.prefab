@@ -97,6 +97,7 @@ MonoBehaviour:
   - {fileID: 3035027581530533311}
   upgradePanel: {fileID: 6701877493921697740}
   upgrades:
+  - {fileID: 11400000, guid: bdacb4bb844c7444caef98139ed6e2aa, type: 2}
   - {fileID: 11400000, guid: 256949e04ffbd48ec8549af68c66f683, type: 2}
   - {fileID: 11400000, guid: 55654263071c94f0da2a186d5b4c2e4e, type: 2}
   - {fileID: 11400000, guid: 1597aee2c7ec7429686261d3d8175f3f, type: 2}

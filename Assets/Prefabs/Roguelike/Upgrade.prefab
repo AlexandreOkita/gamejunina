@@ -62,6 +62,7 @@ MonoBehaviour:
   description: {fileID: 5627262975050699165}
   image: {fileID: 6728827980226565763}
   button: {fileID: 1118993431560774544}
+  trippleWeapon: {fileID: 3076071658668725533, guid: 272643c568dd2457fb2f70c36e1ec337, type: 3}
 --- !u!1 &2994358221208403239
 GameObject:
   m_ObjectHideFlags: 0
@@ -181,7 +182,7 @@ MonoBehaviour:
     m_SelectedTrigger: Selected
     m_DisabledTrigger: Disabled
   m_Interactable: 1
-  m_TargetGraphic: {fileID: 0}
+  m_TargetGraphic: {fileID: 7579093762219496833}
   m_OnClick:
     m_PersistentCalls:
       m_Calls: []
