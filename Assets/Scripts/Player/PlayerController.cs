@@ -21,8 +21,15 @@ public class PlayerController : MonoBehaviour
     void Start()
     {
         _playerAim.UpdateAttack(_initialWeapon);
-        _health.OnDeath += () => _movement.enabled = false;
+        _health.OnDeath += DisablePlayer;
         _health.OnDeath += () => _playerAnimator.SetTrigger(DEAD_PARAMETER_HASH);
+    }
+
+    void DisablePlayer()
+    {
+        _movement.enabled = false;
+        _playerAim.AimParent.gameObject.SetActive(false);
+        _playerAim.enabled = false;
     }
 
     public void Setup(PlayerData playerData, Bounds playerBounds)
@@ -40,6 +47,8 @@ public class PlayerController : MonoBehaviour
 
     public void OnAttack(InputValue value)
     {
+        if (!Health.IsAlive) return;
+
         _playerAim.CurrentAttack.TryAttack(attackSpeedMod, attackMod);
     }
 

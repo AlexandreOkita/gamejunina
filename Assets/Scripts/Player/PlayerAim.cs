@@ -9,6 +9,7 @@ public class PlayerAim : MonoBehaviour
     [SerializeField] SpriteRenderer _aimIndicatorSprite;
 
     public AttackBase CurrentAttack { get; private set; }
+    public Transform AimParent => _aimParent;
 
     bool _isMouseBased;
     Camera _mainCamera;

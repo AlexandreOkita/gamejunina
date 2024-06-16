@@ -14,6 +14,7 @@ namespace healthSystem
         
         public float CurrentHealth { get; set; }
         public float MaxHealth => maxHealth;
+        public bool IsAlive => CurrentHealth > 0;
 
         private HealthLogger _logger;
 

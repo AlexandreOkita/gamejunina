@@ -9407,6 +9407,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f2e9b9cc52004b9890f5e793bd584f9c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _teleportParticle: {fileID: 3506232112384003102, guid: 12852abb1d30d40bdbc92530a439420c, type: 3}
+  _bounds: {fileID: 7997097990645262292}
 --- !u!1 &6170454127043827804
 GameObject:
   m_ObjectHideFlags: 0
