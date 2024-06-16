@@ -79,6 +79,6 @@ public class NewBehaviourScript : MonoBehaviour
     {
         Vector3 direction = (target.position - transform.position).normalized;
         weapon.transform.right = direction;
-        weapon.TryAttack();
+        weapon.TryAttack(1, 1);
     }
 }

@@ -6,7 +6,7 @@ public class ProjectileMovement : MonoBehaviour, ITeleportable
 {
 
     [SerializeField] private float speed = 10f;
-    [SerializeField] private float damage = 10f;
+    [SerializeField] public float damage = 10f;
     [SerializeField] private bool hitMobs = true;
 
     // Update is called once per frame
@@ -25,4 +25,5 @@ public class ProjectileMovement : MonoBehaviour, ITeleportable
         }
         Destroy(gameObject);
     }
+
 }

@@ -18,6 +18,18 @@ public class UpgradeButton : MonoBehaviour
         button.onClick.RemoveAllListeners();
         button.onClick.AddListener(() =>
         {
+            switch(upgrade.type)
+            {
+                case UpgradeType.HEALTH:
+                    player.upgradeHealth();
+                    break;
+                case UpgradeType.ATTACK_SPEED:
+                    player.upgradeAttackSpeed();
+                    break;
+                case UpgradeType.DAMAGE:
+                    player.upgradeAttack();
+                    break;
+            }
             selected?.Invoke();
         });
     }

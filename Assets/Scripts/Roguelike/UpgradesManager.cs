@@ -19,6 +19,7 @@ public class UpgradesManager : MonoBehaviour
         if (currentPlayerIndex >= players.Count)
         {
             upgradePanel.gameObject.SetActive(false);
+            currentPlayerIndex = 0;
         } else
         {
             List<AttributeUpgrade> selectedUpgrades = new List<AttributeUpgrade>();

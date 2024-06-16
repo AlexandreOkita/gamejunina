@@ -8,5 +8,13 @@ public class AttributeUpgrade : ScriptableObject
 {
     public string title;
     public string description;
+    public UpgradeType type;
     public Sprite sprite;
+}
+
+public enum UpgradeType
+{
+    HEALTH,
+    DAMAGE,
+    ATTACK_SPEED
 }
