@@ -7,6 +7,7 @@ namespace healthSystem
     public class Health : MonoBehaviour, IDamageable
     {
         [SerializeField] private float _maxHealth;
+        [SerializeField] private bool isPlayer;
 
         public event Action<float> OnDamageReceived;
         public event Action OnDeath;
@@ -39,6 +40,11 @@ namespace healthSystem
         private void OnDestroy()
         {
             _logger?.Dispose();
+        }
+
+        bool IDamageable.IsPlayer()
+        {
+            return isPlayer;
         }
     }
 }
