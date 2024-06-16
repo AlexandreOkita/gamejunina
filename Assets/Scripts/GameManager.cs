@@ -27,7 +27,7 @@ public class GameManager : MonoBehaviour
 
     public event Action OnGameStarted;
 
-    public List<GameObject> Players => _playerManager.Players;
+    public List<PlayerController> Players => _playerManager.Players;
 
     bool _isRunning;
 

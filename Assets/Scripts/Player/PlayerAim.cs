@@ -6,6 +6,7 @@ public class PlayerAim : MonoBehaviour
     [SerializeField] Transform _aimParent;
     [SerializeField] Transform _attackParent;
     [SerializeField] PlayerInput _playerInput;
+    [SerializeField] SpriteRenderer _aimIndicatorSprite;
 
     public AttackBase CurrentAttack { get; private set; }
 
@@ -44,4 +45,6 @@ public class PlayerAim : MonoBehaviour
 
         CurrentAttack = Instantiate(attack, _attackParent);
     }
+
+    public void SetIndicatorStyle(Color color) => _aimIndicatorSprite.color = color;
 }

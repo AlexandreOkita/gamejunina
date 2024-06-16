@@ -137,7 +137,7 @@ SpriteRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: fd53be4b4dbf54194942a6b81dfebaa9, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -349,6 +349,7 @@ MonoBehaviour:
   _aimParent: {fileID: 4584377207624474456}
   _attackParent: {fileID: 943017370503490536}
   _playerInput: {fileID: 4234014416239241472}
+  _aimIndicatorSprite: {fileID: 7733842791688438203}
 --- !u!114 &4690522569415324653
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -361,8 +362,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d79cde8da2e641c99fe116d4ca7725ef, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _health: {fileID: 1809999626193570261}
   _initialWeapon: {fileID: 2221238186260920995, guid: c5815d17fe132403c89b7fa13f0199f7, type: 3}
   _playerAim: {fileID: 1498499136287240345}
+  _playerSprite: {fileID: 788072912124718638}
 --- !u!1 &8829103005035997069
 GameObject:
   m_ObjectHideFlags: 0
