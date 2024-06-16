@@ -664,6 +664,14 @@ PrefabInstance:
       value: GameManager
       objectReference: {fileID: 0}
     - target: {fileID: 8472767872902527277, guid: 97bec431de0754ec7ae7cba7ad74c32e, type: 3}
+      propertyPath: currentWave
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 8472767872902527277, guid: 97bec431de0754ec7ae7cba7ad74c32e, type: 3}
+      propertyPath: skeletonPrefab
+      value: 
+      objectReference: {fileID: 8045014169912576878, guid: 937a0f9908c16458daf92635d02f78f7, type: 3}
+    - target: {fileID: 8472767872902527277, guid: 97bec431de0754ec7ae7cba7ad74c32e, type: 3}
       propertyPath: spawners.Array.size
       value: 6
       objectReference: {fileID: 0}
