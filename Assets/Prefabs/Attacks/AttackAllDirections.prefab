@@ -25,7 +25,7 @@ Transform:
   m_GameObject: {fileID: 380540088826007834}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: 0.7071068, w: 0.7071068}
-  m_LocalPosition: {x: 0, y: 1, z: 0}
+  m_LocalPosition: {x: 0, y: 1.8, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -56,7 +56,7 @@ Transform:
   m_GameObject: {fileID: 3702037286661360823}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: 1, w: 0}
-  m_LocalPosition: {x: -1, y: 0, z: 0}
+  m_LocalPosition: {x: -1.8, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -87,7 +87,7 @@ Transform:
   m_GameObject: {fileID: 4063328921865143287}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: -0.7071068, w: 0.7071068}
-  m_LocalPosition: {x: 0, y: -1, z: 0}
+  m_LocalPosition: {x: 0, y: -1.8, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -118,7 +118,7 @@ Transform:
   m_GameObject: {fileID: 4460728557748352498}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 1.8, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -149,7 +149,7 @@ Transform:
   m_GameObject: {fileID: 5681157302501568566}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0.92387956, w: 0.38268343}
-  m_LocalPosition: {x: -0.7, y: 0.7, z: 0}
+  m_LocalPosition: {x: -1.35, y: 1.35, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -180,7 +180,7 @@ Transform:
   m_GameObject: {fileID: 6908367495746904944}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: -0, z: 0.9238796, w: -0.38268325}
-  m_LocalPosition: {x: -0.7, y: -0.7, z: 0}
+  m_LocalPosition: {x: -1.35, y: -1.35, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -211,7 +211,7 @@ Transform:
   m_GameObject: {fileID: 7489023524701037638}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0.38268343, w: 0.92387956}
-  m_LocalPosition: {x: 0.7, y: 0.7, z: 0}
+  m_LocalPosition: {x: 1.35, y: 1.35, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -242,7 +242,7 @@ Transform:
   m_GameObject: {fileID: 8002768682229277295}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: -0.38268343, w: 0.92387956}
-  m_LocalPosition: {x: 0.7, y: -0.7, z: 0}
+  m_LocalPosition: {x: 1.35, y: -1.35, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -260,6 +260,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: AttackAllDirections
       objectReference: {fileID: 0}
+    - target: {fileID: 5332151415770736996, guid: 13c76dd4382ba445b8aae434fce737e8, type: 3}
+      propertyPath: projectile
+      value: 
+      objectReference: {fileID: 2341378888336201182, guid: 4ed0206bf714845b79e838d5a143f1fc, type: 3}
     - target: {fileID: 5332151415770736996, guid: 13c76dd4382ba445b8aae434fce737e8, type: 3}
       propertyPath: attackCooldown
       value: 1.2
@@ -348,22 +352,22 @@ PrefabInstance:
       addedObject: {fileID: 5914290172853250457}
     - targetCorrespondingSourceObject: {fileID: 5604648791408941922, guid: 13c76dd4382ba445b8aae434fce737e8, type: 3}
       insertIndex: -1
-      addedObject: {fileID: 311018223664138463}
+      addedObject: {fileID: 818692349158300010}
     - targetCorrespondingSourceObject: {fileID: 5604648791408941922, guid: 13c76dd4382ba445b8aae434fce737e8, type: 3}
       insertIndex: -1
       addedObject: {fileID: 5962042163889401146}
     - targetCorrespondingSourceObject: {fileID: 5604648791408941922, guid: 13c76dd4382ba445b8aae434fce737e8, type: 3}
       insertIndex: -1
-      addedObject: {fileID: 8700221529984219634}
+      addedObject: {fileID: 2936360259479966439}
     - targetCorrespondingSourceObject: {fileID: 5604648791408941922, guid: 13c76dd4382ba445b8aae434fce737e8, type: 3}
       insertIndex: -1
-      addedObject: {fileID: 818692349158300010}
+      addedObject: {fileID: 311018223664138463}
     - targetCorrespondingSourceObject: {fileID: 5604648791408941922, guid: 13c76dd4382ba445b8aae434fce737e8, type: 3}
       insertIndex: -1
       addedObject: {fileID: 7608515361293046723}
     - targetCorrespondingSourceObject: {fileID: 5604648791408941922, guid: 13c76dd4382ba445b8aae434fce737e8, type: 3}
       insertIndex: -1
-      addedObject: {fileID: 2936360259479966439}
+      addedObject: {fileID: 8700221529984219634}
     - targetCorrespondingSourceObject: {fileID: 5604648791408941922, guid: 13c76dd4382ba445b8aae434fce737e8, type: 3}
       insertIndex: -1
       addedObject: {fileID: 3216857098851558278}
