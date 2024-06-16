@@ -49,17 +49,17 @@ public class WaveManager : MonoBehaviour
         );
         if (remainingMobs <= 0 && !waveFinished)
         {
+            waveFinished = true;
             WaveFinished?.Invoke();
             resetSpawners();
             Debug.Log("Wave Finished!");
-            waveFinished = true;
         }
     }
 
     private int GetSkeletonsQtt(int currentWave)
     {
         // A partir da quarta rodada, nasce 2 esqueletos extras por rodada.
-        int skeletonsQtt = 2 * currentWave - 6;
+        int skeletonsQtt = 2 * currentWave - 4;
         if (skeletonsQtt < 0)
         {
             return 0;
@@ -70,7 +70,7 @@ public class WaveManager : MonoBehaviour
     private int GetZombiesQtt(int currentWave)
     {
         // Nasce 3 zumbis extras por rodada.
-        return 3 * currentWave;
+        return 3 * currentWave + 4;
     }
 
     private void resetSpawners()

@@ -8,11 +8,6 @@ public class Spawner : MonoBehaviour
     private int mobsSpawned = 0;
     private List<Mob> mobQueue = new();
     public int RemainingMobs { get; private set; }
-    // Start is called before the first frame update
-    void Start()
-    {
-        RemainingMobs = 0;
-    }
 
     public void StartSpawning()
     {

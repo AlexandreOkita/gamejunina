@@ -6,6 +6,8 @@ public class LevelManager : MonoBehaviour
 {
     [SerializeField] int startLevel = 0;
     [SerializeField] WaveManager waveManager;
+    [SerializeField] UpgradesManager upgradesManager;
+    //[SerializeField] RoguelikeManager roguelikeManager;
     private int currentWave;
     // Start is called before the first frame update
     void Start()
@@ -19,7 +21,8 @@ public class LevelManager : MonoBehaviour
     {
         currentWave++;
         Debug.Log($"Começando próxima wave!!! - {currentWave}");
-        StartCoroutine(StartNextWaveAfterDelay(5f));
+        StartCoroutine(StartNextWaveAfterDelay(20f));
+        upgradesManager.ShowUpgrades();
     }
 
     private IEnumerator StartNextWaveAfterDelay(float delay)
