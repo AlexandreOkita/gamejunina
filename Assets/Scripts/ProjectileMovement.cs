@@ -2,7 +2,7 @@ using healthSystem;
 using UnityEngine;
 // ReSharper disable All
 
-public class ProjectileMovement : MonoBehaviour
+public class ProjectileMovement : MonoBehaviour, ITeleportable
 {
 
     [SerializeField] private float speed = 10f;
