@@ -696,6 +696,11 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 55a35f400d4644db8b910a69024844b6, type: 3}
+--- !u!61 &1652323550 stripped
+BoxCollider2D:
+  m_CorrespondingSourceObject: {fileID: 3233825389949444617, guid: 55a35f400d4644db8b910a69024844b6, type: 3}
+  m_PrefabInstance: {fileID: 1652323549}
+  m_PrefabAsset: {fileID: 0}
 --- !u!224 &1907552116 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 6701877493921697740, guid: bbe3bd42bf05245a79483257ca45c99b, type: 3}
@@ -871,6 +876,10 @@ PrefabInstance:
       propertyPath: _gameHud
       value: 
       objectReference: {fileID: 1398736865}
+    - target: {fileID: 2934659671840082199, guid: 97bec431de0754ec7ae7cba7ad74c32e, type: 3}
+      propertyPath: _playerBounds
+      value: 
+      objectReference: {fileID: 1652323550}
     - target: {fileID: 6730567832646644636, guid: 97bec431de0754ec7ae7cba7ad74c32e, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0

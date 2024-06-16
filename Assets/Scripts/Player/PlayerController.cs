@@ -25,11 +25,12 @@ public class PlayerController : MonoBehaviour
         _health.OnDeath += () => _playerAnimator.SetTrigger(DEAD_PARAMETER_HASH);
     }
 
-    public void Setup(PlayerData playerData)
+    public void Setup(PlayerData playerData, Bounds playerBounds)
     {
         PlayerColor = playerData.Color;
         _playerAim.SetIndicatorStyle(PlayerColor);
         _playerAnimator.runtimeAnimatorController = playerData.AnimatorController;
+        _movement.SetupBounds(playerBounds);
     }
 
     public void OnAttack(InputValue value)

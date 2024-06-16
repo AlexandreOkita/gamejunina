@@ -123,8 +123,8 @@ MonoBehaviour:
   _health: {fileID: -590250532293199190}
   _damagePrefab: {fileID: 258625106092188900, guid: c0e3d0ee5a8eb49b88e34e4144d9eb96, type: 3}
   _mainRenderer: {fileID: 0}
-  _damageColor: {r: 0, g: 0, b: 0, a: 0}
-  _effectDuration: 0
+  _damageColor: {r: 1, g: 1, b: 1, a: 1}
+  _effectDuration: 0.7
 --- !u!1 &7472156793755819915
 GameObject:
   m_ObjectHideFlags: 0
