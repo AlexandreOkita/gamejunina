@@ -48,6 +48,7 @@ public class PlayerController : MonoBehaviour
     public void OnAttack(InputValue value)
     {
         if (!Health.IsAlive) return;
+        if (Time.timeScale < 0.1f) return;
 
         _playerAim.CurrentAttack.TryAttack(attackSpeedMod, attackMod);
     }
