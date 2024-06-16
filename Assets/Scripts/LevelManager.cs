@@ -20,7 +20,7 @@ public class LevelManager : MonoBehaviour
     {
         currentWave++;
         Debug.Log($"Começando próxima wave!!! - {currentWave}");
-        StartCoroutine(StartNextWaveAfterDelay(15f));
+        StartCoroutine(StartNextWaveAfterDelay(5f));
         var projectiles = FindObjectsOfType<ProjectileMovement>();
         foreach(var p in projectiles)
         {

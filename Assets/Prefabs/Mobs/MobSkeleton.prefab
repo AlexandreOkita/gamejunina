@@ -48,13 +48,17 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2221238186260920995, guid: c5815d17fe132403c89b7fa13f0199f7, type: 3}
+      propertyPath: projectile
+      value: 
+      objectReference: {fileID: 3269000946341960988, guid: 78585bbb0ff7d4b4d98679e69f77b977, type: 3}
     - target: {fileID: 2223993229988895498, guid: c5815d17fe132403c89b7fa13f0199f7, type: 3}
       propertyPath: m_Name
       value: AttackWand
       objectReference: {fileID: 0}
     - target: {fileID: 8293517861208317722, guid: c5815d17fe132403c89b7fa13f0199f7, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0.5
+      value: 0.7
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -66,17 +70,6 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 1939715855474591909, guid: c5815d17fe132403c89b7fa13f0199f7, type: 3}
   m_PrefabInstance: {fileID: 1990509898410943157}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &381920209792112662 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 2221238186260920995, guid: c5815d17fe132403c89b7fa13f0199f7, type: 3}
-  m_PrefabInstance: {fileID: 1990509898410943157}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b07658d4fe7234ff2a9d35acec55f139, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1001 &7189110368975266746
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -231,7 +224,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a765f3dc6dcb348a2a1489e967af69fe, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 0.5
-  attackRange: 4
-  weapon: {fileID: 381920209792112662}
+  speed: 0.7
+  attackRange: 10
+  weapon: {fileID: 2221238186260920995, guid: 840c693159583402682fc8bd9d6e7f21, type: 3}
   _animator: {fileID: 6770997487402246298}

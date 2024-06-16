@@ -385,6 +385,7 @@ MonoBehaviour:
   _mainRenderer: {fileID: 788072912124718638}
   _damageColor: {r: 0.8773585, g: 0.19450872, b: 0.19450872, a: 0.8235294}
   _effectDuration: 0.9
+  _playerController: {fileID: 4690522569415324653}
 --- !u!1 &8829103005035997069
 GameObject:
   m_ObjectHideFlags: 0

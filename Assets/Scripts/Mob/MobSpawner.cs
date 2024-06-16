@@ -28,8 +28,6 @@ public class Spawner : MonoBehaviour
 
     IEnumerator SpawnMobs()
     {
-        yield return new WaitForSeconds(cooldown);
-
         while (mobsSpawned < mobQueue.Count)
         {
             Mob spawnedMob = Instantiate(mobQueue[mobsSpawned], transform.position, Quaternion.identity);

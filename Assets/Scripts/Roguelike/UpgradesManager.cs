@@ -19,10 +19,12 @@ public class UpgradesManager : MonoBehaviour
         var players = gm.Players.ToList();
         if (currentPlayerIndex >= players.Count)
         {
+            Time.timeScale = 1;
             upgradePanel.gameObject.SetActive(false);
             currentPlayerIndex = 0;
         } else
         {
+            Time.timeScale = 0;
             background.color = players[currentPlayerIndex].PlayerColor;
             List<AttributeUpgrade> selectedUpgrades = new List<AttributeUpgrade>();
             while (selectedUpgrades.Count < upgradeButtons.Count)
