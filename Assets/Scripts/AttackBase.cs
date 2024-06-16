@@ -22,8 +22,8 @@ public class AttackBase : MonoBehaviour
     {
         foreach (var launchPoint in launchPoints)
         {
-            Instantiate(projectile, launchPoint.position, launchPoint.rotation);
-            //p.damage *= damageMod;
+            var p = Instantiate(projectile, launchPoint.position, launchPoint.rotation);
+            p.damage *= damageMod;
         }
     }
 }
