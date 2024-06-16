@@ -10,7 +10,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 1939715855474591909, guid: c5815d17fe132403c89b7fa13f0199f7, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0.472
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1939715855474591909, guid: c5815d17fe132403c89b7fa13f0199f7, type: 3}
       propertyPath: m_LocalPosition.y
@@ -51,6 +51,10 @@ PrefabInstance:
     - target: {fileID: 2223993229988895498, guid: c5815d17fe132403c89b7fa13f0199f7, type: 3}
       propertyPath: m_Name
       value: AttackWand
+      objectReference: {fileID: 0}
+    - target: {fileID: 8293517861208317722, guid: c5815d17fe132403c89b7fa13f0199f7, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0.5
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

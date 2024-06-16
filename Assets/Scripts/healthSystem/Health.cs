@@ -6,14 +6,14 @@ namespace healthSystem
 {
     public class Health : MonoBehaviour, IDamageable
     {
-        [SerializeField] private float _maxHealth;
+        [SerializeField] public float maxHealth;
         [SerializeField] private bool isPlayer;
 
         public event Action<float> OnDamageReceived;
         public event Action OnDeath;
         
         public float CurrentHealth { get; private set; }
-        public float MaxHealth => _maxHealth;
+        public float MaxHealth => maxHealth;
 
         private HealthLogger _logger;
 

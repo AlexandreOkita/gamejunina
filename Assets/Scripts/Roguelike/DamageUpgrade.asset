@@ -16,4 +16,5 @@ MonoBehaviour:
   description: "O atributo mais tryhard de todos os jogadores de roguelike. Mas ser\xE1
     que o atributo \xE9 t\xE3o bom quando voc\xEA sente ele na pr\xF3pria pele? (Provavelmente
     sim)"
+  type: 1
   sprite: {fileID: 0}

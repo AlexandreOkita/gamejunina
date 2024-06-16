@@ -15,6 +15,9 @@ public class PlayerController : MonoBehaviour
     public Health Health => _health;
     public Color PlayerColor { get; private set; }
 
+    private float attackMod = 1f;
+    private float attackSpeedMod = 1f;
+
     void Start()
     {
         _playerAim.UpdateAttack(_initialWeapon);
@@ -31,6 +34,21 @@ public class PlayerController : MonoBehaviour
 
     public void OnAttack(InputValue value)
     {
-        _playerAim.CurrentAttack.TryAttack();
+        _playerAim.CurrentAttack.TryAttack(attackSpeedMod, attackMod);
+    }
+
+    public void upgradeAttack()
+    {
+        attackMod += 0.5f;
+    }
+
+    public void upgradeAttackSpeed()
+    {
+        attackSpeedMod *= 0.1f;
+    }
+
+    public void upgradeHealth()
+    {
+        _health.maxHealth += 25;
     }
 }

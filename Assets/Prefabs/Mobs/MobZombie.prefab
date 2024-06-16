@@ -223,7 +223,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 1301081535517867757, guid: d3a3b8cc9b4784cbdad03a600900e951, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0.541
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1301081535517867757, guid: d3a3b8cc9b4784cbdad03a600900e951, type: 3}
       propertyPath: m_LocalPosition.y
@@ -264,6 +264,10 @@ PrefabInstance:
     - target: {fileID: 1601075328514633026, guid: d3a3b8cc9b4784cbdad03a600900e951, type: 3}
       propertyPath: m_Name
       value: AttackMelee
+      objectReference: {fileID: 0}
+    - target: {fileID: 7717280407245727218, guid: d3a3b8cc9b4784cbdad03a600900e951, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0.6
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
