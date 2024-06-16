@@ -44,7 +44,7 @@ public class PlayerController : MonoBehaviour
 
     public void upgradeAttackSpeed()
     {
-        attackSpeedMod *= 0.1f;
+        attackSpeedMod *= 0.9f;
     }
 
     public void upgradeHealth()

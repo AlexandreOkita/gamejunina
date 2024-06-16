@@ -64,13 +64,13 @@ public class WaveManager : MonoBehaviour
         {
             return 0;
         }
-        return skeletonsQtt;
+        return skeletonsQtt * GameManager.Instance.Players.Count;
     }
 
     private int GetZombiesQtt(int currentWave)
     {
         // Nasce 3 zumbis extras por rodada.
-        return 3 * currentWave + 4;
+        return (3 * currentWave + 4) * GameManager.Instance.Players.Count;
     }
 
     private void resetSpawners()

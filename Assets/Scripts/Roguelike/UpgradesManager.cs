@@ -10,6 +10,7 @@ public class UpgradesManager : MonoBehaviour
     [SerializeField] private List<UpgradeButton> upgradeButtons;
     [SerializeField] private Transform upgradePanel; // Painel onde as opções de melhorias são exibidas
     [SerializeField] private List<AttributeUpgrade> upgrades;
+    [SerializeField] Image background;
     private int currentPlayerIndex;
 
     public void ShowUpgrades()
@@ -22,6 +23,7 @@ public class UpgradesManager : MonoBehaviour
             currentPlayerIndex = 0;
         } else
         {
+            background.color = players[currentPlayerIndex].PlayerColor;
             List<AttributeUpgrade> selectedUpgrades = new List<AttributeUpgrade>();
             while (selectedUpgrades.Count < upgradeButtons.Count)
             {
