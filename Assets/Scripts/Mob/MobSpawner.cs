@@ -5,9 +5,8 @@ using UnityEngine;
 public class Spawner : MonoBehaviour
 {
     [SerializeField] private float cooldown = 10f;
-    [SerializeField] private Mob mob;
     private int mobsSpawned = 0;
-    private List<Mob> mobQueue;
+    private List<Mob> mobQueue = new();
     public int RemainingMobs { get; private set; }
     // Start is called before the first frame update
     void Start()
@@ -17,6 +16,7 @@ public class Spawner : MonoBehaviour
 
     public void StartSpawning()
     {
+        RemainingMobs = mobQueue.Count;
         StartCoroutine(SpawnMobs());
     }
 
@@ -29,6 +29,7 @@ public class Spawner : MonoBehaviour
     {
         yield return new WaitForSeconds(cooldown);
 
+        Debug.Log(mobQueue.Count);
         while (mobsSpawned < mobQueue.Count)
         {
             Mob spawnedMob = Instantiate(mobQueue[mobsSpawned], transform.position, Quaternion.identity);
