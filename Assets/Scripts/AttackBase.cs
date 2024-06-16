@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class AttackBase : MonoBehaviour
 {
+    [SerializeField] AudioSource _attackAudio;
     public List<Transform> launchPoints;
     public ProjectileMovement projectile;
     public float attackCooldown = 1f;
@@ -20,6 +21,7 @@ public class AttackBase : MonoBehaviour
 
     private void Attack(float damageMod)
     {
+        _attackAudio.Play();
         foreach (var launchPoint in launchPoints)
         {
             var p = Instantiate(projectile, launchPoint.position, launchPoint.rotation);
