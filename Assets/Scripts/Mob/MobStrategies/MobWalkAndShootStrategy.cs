@@ -48,13 +48,15 @@ public class NewBehaviourScript : MonoBehaviour
         float minDistance = Mathf.Infinity;
         Vector3 currentPos = transform.position;
 
-        foreach (Transform player in players)
+        foreach (PlayerController player in GameManager.Instance.Players)
         {
-            float distance = Vector3.Distance(player.position, currentPos);
+            if (!player.Health.IsAlive) continue;
+
+            float distance = Vector3.Distance(player.transform.position, currentPos);
             if (distance < minDistance)
             {
                 minDistance = distance;
-                nearestPlayer = player;
+                nearestPlayer = player.transform;
             }
         }
         return nearestPlayer;

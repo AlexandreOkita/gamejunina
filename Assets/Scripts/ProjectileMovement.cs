@@ -23,9 +23,11 @@ public class ProjectileMovement : MonoBehaviour, ITeleportable
         if (_isDisposing) return;
 
         IDamageable health = other.GetComponent<IDamageable>();
+        if (health == null) return;
+
         if (hitMobs || health.IsPlayer())
         {
-            if (health == null) return;
+            // if (health == null) return;
             health.TakeDamage(damage);
         }
         StartDestroy();
