@@ -108,6 +108,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   health: {fileID: -590250532293199190}
+  _animator: {fileID: 0}
+  _follow: {fileID: 0}
+  _collider: {fileID: 868066285380567359}
 --- !u!114 &7465752905793824482
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -125,6 +128,7 @@ MonoBehaviour:
   _mainRenderer: {fileID: 0}
   _damageColor: {r: 1, g: 1, b: 1, a: 1}
   _effectDuration: 0.7
+  _playerController: {fileID: 0}
 --- !u!1 &7472156793755819915
 GameObject:
   m_ObjectHideFlags: 0

@@ -16,6 +16,14 @@ PrefabInstance:
       propertyPath: m_Size.y
       value: 0.34674883
       objectReference: {fileID: 0}
+    - target: {fileID: 892126185059166420, guid: 22d7d296e656e47bc9781aa6c7aed599, type: 3}
+      propertyPath: _follow
+      value: 
+      objectReference: {fileID: -3293198490955368817}
+    - target: {fileID: 892126185059166420, guid: 22d7d296e656e47bc9781aa6c7aed599, type: 3}
+      propertyPath: _animator
+      value: 
+      objectReference: {fileID: 1606007760955267496}
     - target: {fileID: 2590066289314389645, guid: 22d7d296e656e47bc9781aa6c7aed599, type: 3}
       propertyPath: m_LocalScale.x
       value: 2
