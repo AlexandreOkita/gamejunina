@@ -100,8 +100,9 @@ MonoBehaviour:
     _spritesheet: {fileID: 22100000, guid: 67018118765614e0595311c5977009a1, type: 2}
   - _color: {r: 1, g: 0.3254902, b: 0.75686276, a: 1}
     _spritesheet: {fileID: 22100000, guid: 3e0a7e08d187e4d668c1920b7188ac50, type: 2}
-  - _color: {r: 0, g: 0, b: 0, a: 0}
-    _spritesheet: {fileID: 0}
+  - _color: {r: 0.3254902, g: 0.5529412, b: 1, a: 1}
+    _spritesheet: {fileID: 22100000, guid: fc50ba7ef24074c459c026f19afd949a, type: 2}
+  _playerBounds: {fileID: 0}
 --- !u!1 &3076282297996015949
 GameObject:
   m_ObjectHideFlags: 0
