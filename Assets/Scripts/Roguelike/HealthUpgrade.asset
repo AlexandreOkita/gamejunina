@@ -15,4 +15,5 @@ MonoBehaviour:
   title: Aumentar Vida
   description: "Ser\xE1 que voc\xEA realmente precisa disso? Afinal, se voc\xEA n\xE3o
     tomar dano, n\xE3o precisa de vida..."
-  sprite: {fileID: 0}
+  type: 0
+  sprite: {fileID: 21300000, guid: ddcca57500503a445b8c46910f6a4ad8, type: 3}

@@ -16,4 +16,4 @@ MonoBehaviour:
   description: "Para quando voc\xEA acha que o n\xFAmero de proj\xE9teis no mapa
     ainda n\xE3o est\xE1 o suficiente."
   type: 2
-  sprite: {fileID: 0}
+  sprite: {fileID: 21300000, guid: b4b9b38faa7dd2e4bbb8f4c68aae467a, type: 3}
