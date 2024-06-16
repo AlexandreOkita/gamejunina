@@ -48,6 +48,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2221238186260920995, guid: c5815d17fe132403c89b7fa13f0199f7, type: 3}
+      propertyPath: projectile
+      value: 
+      objectReference: {fileID: 3269000946341960988, guid: 78585bbb0ff7d4b4d98679e69f77b977, type: 3}
     - target: {fileID: 2223993229988895498, guid: c5815d17fe132403c89b7fa13f0199f7, type: 3}
       propertyPath: m_Name
       value: AttackWand
@@ -231,7 +235,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a765f3dc6dcb348a2a1489e967af69fe, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 0.5
-  attackRange: 4
+  speed: 0.7
+  attackRange: 10
   weapon: {fileID: 381920209792112662}
   _animator: {fileID: 6770997487402246298}
