@@ -20,6 +20,12 @@ public class Spawner : MonoBehaviour
         StartCoroutine(SpawnMobs());
     }
 
+    public void ResetSpawner()
+    {
+        mobsSpawned = 0;
+        mobQueue = new();
+    }
+
     public void AddMobToQueue(Mob mob)
     {
         mobQueue.Add(mob);
@@ -29,7 +35,6 @@ public class Spawner : MonoBehaviour
     {
         yield return new WaitForSeconds(cooldown);
 
-        Debug.Log(mobQueue.Count);
         while (mobsSpawned < mobQueue.Count)
         {
             Mob spawnedMob = Instantiate(mobQueue[mobsSpawned], transform.position, Quaternion.identity);

@@ -179,5 +179,5 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 0.5
-  attackRange: 10
+  attackRange: 5
   weapon: {fileID: 381920209792112662}
