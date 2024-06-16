@@ -1,5 +1,4 @@
 using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class LevelManager : MonoBehaviour
@@ -21,7 +20,12 @@ public class LevelManager : MonoBehaviour
     {
         currentWave++;
         Debug.Log($"Começando próxima wave!!! - {currentWave}");
-        StartCoroutine(StartNextWaveAfterDelay(1f));
+        StartCoroutine(StartNextWaveAfterDelay(15f));
+        var projectiles = FindObjectsOfType<ProjectileMovement>();
+        foreach(var p in projectiles)
+        {
+            Destroy(p.gameObject);
+        }
         upgradesManager.ShowUpgrades();
     }
 
