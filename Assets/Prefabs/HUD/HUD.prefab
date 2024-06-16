@@ -19,7 +19,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &572234991648870340
 RectTransform:
   m_ObjectHideFlags: 0
@@ -215,6 +215,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: HealthUI - P1
       objectReference: {fileID: 0}
+    - target: {fileID: 3185737409313820522, guid: 5f7fd9acf57454f69b2a7f9d49c45eee, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -327,6 +331,10 @@ PrefabInstance:
     - target: {fileID: 3185737409313820522, guid: 5f7fd9acf57454f69b2a7f9d49c45eee, type: 3}
       propertyPath: m_Name
       value: HealthUI - P3
+      objectReference: {fileID: 0}
+    - target: {fileID: 3185737409313820522, guid: 5f7fd9acf57454f69b2a7f9d49c45eee, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5744533512696125804, guid: 5f7fd9acf57454f69b2a7f9d49c45eee, type: 3}
       propertyPath: m_AnchoredPosition.y
@@ -445,6 +453,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: HealthUI - P4
       objectReference: {fileID: 0}
+    - target: {fileID: 3185737409313820522, guid: 5f7fd9acf57454f69b2a7f9d49c45eee, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 5744533512696125804, guid: 5f7fd9acf57454f69b2a7f9d49c45eee, type: 3}
       propertyPath: m_AnchoredPosition.y
       value: 0.6500015
@@ -561,6 +573,10 @@ PrefabInstance:
     - target: {fileID: 3185737409313820522, guid: 5f7fd9acf57454f69b2a7f9d49c45eee, type: 3}
       propertyPath: m_Name
       value: HealthUI - P2
+      objectReference: {fileID: 0}
+    - target: {fileID: 3185737409313820522, guid: 5f7fd9acf57454f69b2a7f9d49c45eee, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
