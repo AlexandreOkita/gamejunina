@@ -19,5 +19,6 @@ public class ProjectileMovement : MonoBehaviour, ITeleportable
         IDamageable health = other.GetComponent<IDamageable>();
         if (health == null) return;
         health.TakeDamage(damage);
+        Destroy(gameObject);
     }
 }

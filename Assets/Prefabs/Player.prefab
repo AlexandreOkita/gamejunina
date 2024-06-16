@@ -336,7 +336,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d79cde8da2e641c99fe116d4ca7725ef, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _initialWeapon: {fileID: 3076071658668725533, guid: 272643c568dd2457fb2f70c36e1ec337, type: 3}
+  _initialWeapon: {fileID: 2221238186260920995, guid: c5815d17fe132403c89b7fa13f0199f7, type: 3}
   _playerAim: {fileID: 1498499136287240345}
 --- !u!1 &8829103005035997069
 GameObject:
