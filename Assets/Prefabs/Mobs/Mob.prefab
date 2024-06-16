@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 868066285380567359}
   - component: {fileID: -590250532293199190}
   - component: {fileID: 892126185059166420}
+  - component: {fileID: 7465752905793824482}
   m_Layer: 0
   m_Name: Mob
   m_TagString: Untagged
@@ -107,6 +108,20 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   health: {fileID: -590250532293199190}
+--- !u!114 &7465752905793824482
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2990234729027332993}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ec8f95558f3d4c7cb41e7fd08d54c4f5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _health: {fileID: -590250532293199190}
+  _damagePrefab: {fileID: 258625106092188900, guid: c0e3d0ee5a8eb49b88e34e4144d9eb96, type: 3}
 --- !u!1 &7472156793755819915
 GameObject:
   m_ObjectHideFlags: 0

@@ -23,17 +23,21 @@ namespace healthSystem
             _logger = new HealthLogger(this);
         }
 
+        void Update()
+        {
+            if (Input.GetKeyDown(KeyCode.O)) OnDeath?.Invoke();
+        }
+
         public void TakeDamage(float damage)
         {
+            if (CurrentHealth <= 0) return; // Already dead
+
             CurrentHealth -= damage;
+            OnDamageReceived?.Invoke(damage);
             if (CurrentHealth <= 0)
             {
                 CurrentHealth = 0;
                 OnDeath?.Invoke();
-            }
-            else
-            {
-                OnDamageReceived?.Invoke(damage);
             }
         }
 

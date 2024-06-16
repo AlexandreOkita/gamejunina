@@ -4,10 +4,13 @@ using UnityEngine.InputSystem;
 
 public class PlayerController : MonoBehaviour
 {
+    static int DEAD_PARAMETER_HASH = Animator.StringToHash("Dead");
+
     [SerializeField] Health _health;
     [SerializeField] AttackBase _initialWeapon;
     [SerializeField] PlayerAim _playerAim;
-    [SerializeField] SpriteRenderer _playerSprite;
+    [SerializeField] Animator _playerAnimator;
+    [SerializeField] PlayerMovement _movement;
 
     public Health Health => _health;
     public Color PlayerColor { get; private set; }
@@ -15,20 +18,19 @@ public class PlayerController : MonoBehaviour
     void Start()
     {
         _playerAim.UpdateAttack(_initialWeapon);
+        _health.OnDeath += () => _movement.enabled = false;
+        _health.OnDeath += () => _playerAnimator.SetTrigger(DEAD_PARAMETER_HASH);
     }
 
-    public void Setup(Color color)
+    public void Setup(PlayerData playerData)
     {
-        PlayerColor = color;
-        _playerAim.SetIndicatorStyle(color);
-        _playerSprite.material.SetColor("_FinalColor", color);
+        PlayerColor = playerData.Color;
+        _playerAim.SetIndicatorStyle(PlayerColor);
+        _playerAnimator.runtimeAnimatorController = playerData.AnimatorController;
     }
 
     public void OnAttack(InputValue value)
     {
         _playerAim.CurrentAttack.TryAttack();
-        // var delta = value.Get<Vector2>();
-        // Debug.Log($"Received {delta}");
-        // transform.position += (Vector3) delta * Time.deltaTime * _speed;
     }
 }

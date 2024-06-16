@@ -205,6 +205,7 @@ GameObject:
   - component: {fileID: 1809999626193570261}
   - component: {fileID: 1498499136287240345}
   - component: {fileID: 4690522569415324653}
+  - component: {fileID: 4470644235035353836}
   m_Layer: 0
   m_Name: Player
   m_TagString: Untagged
@@ -365,7 +366,25 @@ MonoBehaviour:
   _health: {fileID: 1809999626193570261}
   _initialWeapon: {fileID: 2221238186260920995, guid: c5815d17fe132403c89b7fa13f0199f7, type: 3}
   _playerAim: {fileID: 1498499136287240345}
-  _playerSprite: {fileID: 788072912124718638}
+  _playerAnimator: {fileID: 1211824718774335296}
+  _movement: {fileID: 1392767664133818048}
+--- !u!114 &4470644235035353836
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8408126378548666954}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ec8f95558f3d4c7cb41e7fd08d54c4f5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _health: {fileID: 1809999626193570261}
+  _damagePrefab: {fileID: 258625106092188900, guid: c0e3d0ee5a8eb49b88e34e4144d9eb96, type: 3}
+  _mainRenderer: {fileID: 788072912124718638}
+  _damageColor: {r: 0.8773585, g: 0.19450872, b: 0.19450872, a: 0.8235294}
+  _effectDuration: 0.9
 --- !u!1 &8829103005035997069
 GameObject:
   m_ObjectHideFlags: 0

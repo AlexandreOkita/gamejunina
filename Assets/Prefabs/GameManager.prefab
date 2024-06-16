@@ -95,6 +95,13 @@ MonoBehaviour:
   - {r: 1, g: 0.32549024, b: 0.7549977, a: 1}
   - {r: 0.958235, g: 1, b: 0.32549024, a: 1}
   - {r: 0.32549024, g: 0.55297494, b: 1, a: 1}
+  _playerConfigs:
+  - _color: {r: 0.99607843, g: 0.5137255, b: 0.3254902, a: 1}
+    _spritesheet: {fileID: 22100000, guid: 67018118765614e0595311c5977009a1, type: 2}
+  - _color: {r: 1, g: 0.3254902, b: 0.75686276, a: 1}
+    _spritesheet: {fileID: 22100000, guid: 3e0a7e08d187e4d668c1920b7188ac50, type: 2}
+  - _color: {r: 0, g: 0, b: 0, a: 0}
+    _spritesheet: {fileID: 0}
 --- !u!1 &3076282297996015949
 GameObject:
   m_ObjectHideFlags: 0
@@ -141,6 +148,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   startLevel: 0
   waveManager: {fileID: 8472767872902527277}
+  upgradesManager: {fileID: 0}
 --- !u!1 &4369714678532683730
 GameObject:
   m_ObjectHideFlags: 0
