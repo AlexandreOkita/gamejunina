@@ -261,6 +261,10 @@ PrefabInstance:
       value: AttackAllDirections
       objectReference: {fileID: 0}
     - target: {fileID: 5332151415770736996, guid: 13c76dd4382ba445b8aae434fce737e8, type: 3}
+      propertyPath: projectile
+      value: 
+      objectReference: {fileID: 2341378888336201182, guid: 4ed0206bf714845b79e838d5a143f1fc, type: 3}
+    - target: {fileID: 5332151415770736996, guid: 13c76dd4382ba445b8aae434fce737e8, type: 3}
       propertyPath: attackCooldown
       value: 1.2
       objectReference: {fileID: 0}

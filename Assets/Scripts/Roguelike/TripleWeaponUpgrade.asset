@@ -12,8 +12,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 44bdc2eb23c5a4097ad146552c9d5bae, type: 3}
   m_Name: TripleWeaponUpgrade
   m_EditorClassIdentifier: 
-  title: "Tr\xEAs \xE9 melhor!"
+  title: "Arma: Tr\xEAs \xE9 melhor!"
   description: "Por que perder tempo atirando um proj\xE9til quando se pode atirar
     tr\xEAs? Mais proj\xE9teis nunca \xE9 demais!"
   type: 3
-  sprite: {fileID: 0}
+  sprite: {fileID: 21300000, guid: ca92480683a909c4685712d8d88d5e92, type: 3}
+  weapon: {fileID: 3076071658668725533, guid: 272643c568dd2457fb2f70c36e1ec337, type: 3}

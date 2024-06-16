@@ -12,7 +12,7 @@ namespace healthSystem
         public event Action<float> OnDamageReceived;
         public event Action OnDeath;
         
-        public float CurrentHealth { get; private set; }
+        public float CurrentHealth { get; set; }
         public float MaxHealth => maxHealth;
 
         private HealthLogger _logger;

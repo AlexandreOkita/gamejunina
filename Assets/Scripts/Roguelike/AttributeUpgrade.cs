@@ -10,6 +10,7 @@ public class AttributeUpgrade : ScriptableObject
     public string description;
     public UpgradeType type;
     public Sprite sprite;
+    public AttackBase weapon;
 }
 
 public enum UpgradeType
@@ -17,5 +18,6 @@ public enum UpgradeType
     HEALTH,
     DAMAGE,
     ATTACK_SPEED,
-    TRIPLE_WEAPON
+    TRIPLE_WEAPON,
+    ALL_DIRECTIONS
 }

@@ -1,0 +1,20 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 44bdc2eb23c5a4097ad146552c9d5bae, type: 3}
+  m_Name: AllDirectionsWeapon
+  m_EditorClassIdentifier: 
+  title: "Arma: Todas Dire\xE7\xF5es"
+  description: "Pra qu\xEA mirar? Ao contr\xE1rio que muitos pensam, na verdade todos
+    s\xE3o seus inimigos."
+  type: 4
+  sprite: {fileID: 21300000, guid: c02b61840bd13b6438163e5c58fca08d, type: 3}
+  weapon: {fileID: 1259441346986798469, guid: 4fc30aaaecd31004cad7d2dba3769076, type: 3}

@@ -9,7 +9,7 @@ public class UpgradeButton : MonoBehaviour
     [SerializeField] TMP_Text description;
     [SerializeField] Image image;
     [SerializeField] Button button;
-    [SerializeField] AttackBase trippleWeapon;
+
     // Start is called before the first frame update
     public void Setup(AttributeUpgrade upgrade, PlayerController player, Action selected)
     {
@@ -31,7 +31,10 @@ public class UpgradeButton : MonoBehaviour
                     player.upgradeAttack();
                     break;
                 case UpgradeType.TRIPLE_WEAPON:
-                    player.UpdateWeapon(trippleWeapon);
+                    player.UpdateWeapon(upgrade.weapon);
+                    break;
+                case UpgradeType.ALL_DIRECTIONS:
+                    player.UpdateWeapon(upgrade.weapon);
                     break;
             }
             selected?.Invoke();
