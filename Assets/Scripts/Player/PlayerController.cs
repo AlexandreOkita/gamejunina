@@ -13,7 +13,7 @@ public class PlayerController : MonoBehaviour
 
     public void OnAttack(InputValue value)
     {
-        _playerAim.CurrentAttack.Attack();
+        _playerAim.CurrentAttack.TryAttack();
         // var delta = value.Get<Vector2>();
         // Debug.Log($"Received {delta}");
         // transform.position += (Vector3) delta * Time.deltaTime * _speed;

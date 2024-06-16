@@ -1,6 +1,6 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!1001 &4366207904559181581
+--- !u!1001 &6850247941327422516
 PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
@@ -10,15 +10,11 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 1588590401967479638, guid: eb4c32e600aae4b05a474384ef25f564, type: 3}
       propertyPath: m_LocalScale.x
-      value: 0.2
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 1588590401967479638, guid: eb4c32e600aae4b05a474384ef25f564, type: 3}
       propertyPath: m_LocalScale.y
-      value: 0.2
-      objectReference: {fileID: 0}
-    - target: {fileID: 1588590401967479638, guid: eb4c32e600aae4b05a474384ef25f564, type: 3}
-      propertyPath: m_LocalScale.z
-      value: 0.2
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 1588590401967479638, guid: eb4c32e600aae4b05a474384ef25f564, type: 3}
       propertyPath: m_LocalPosition.x
@@ -62,35 +58,43 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4571727327928719484, guid: eb4c32e600aae4b05a474384ef25f564, type: 3}
       propertyPath: m_Name
-      value: ProjectileCapsule
+      value: ProjectileMelee
+      objectReference: {fileID: 0}
+    - target: {fileID: 5032107089298473117, guid: eb4c32e600aae4b05a474384ef25f564, type: 3}
+      propertyPath: m_Size.x
+      value: 1.28
       objectReference: {fileID: 0}
     - target: {fileID: 5032107089298473117, guid: eb4c32e600aae4b05a474384ef25f564, type: 3}
       propertyPath: m_Size.y
-      value: 2
+      value: 1.28
       objectReference: {fileID: 0}
     - target: {fileID: 5032107089298473117, guid: eb4c32e600aae4b05a474384ef25f564, type: 3}
       propertyPath: m_Sprite
       value: 
-      objectReference: {fileID: -9095717837082945937, guid: 207ee8102dd4143d288186ef0be518ee, type: 3}
+      objectReference: {fileID: 21300000, guid: daf2ab606d4db0d4f9ecf4c02137d2a8, type: 3}
     - target: {fileID: 5032107089298473117, guid: eb4c32e600aae4b05a474384ef25f564, type: 3}
       propertyPath: m_WasSpriteAssigned
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6818224666558363628, guid: eb4c32e600aae4b05a474384ef25f564, type: 3}
-      propertyPath: velocidade
-      value: 20
+      propertyPath: hitMobs
+      value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 7838434160424782943, guid: eb4c32e600aae4b05a474384ef25f564, type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 0.7071068
+    - target: {fileID: 7299973858523194273, guid: eb4c32e600aae4b05a474384ef25f564, type: 3}
+      propertyPath: m_Size.x
+      value: 0.5
       objectReference: {fileID: 0}
-    - target: {fileID: 7838434160424782943, guid: eb4c32e600aae4b05a474384ef25f564, type: 3}
-      propertyPath: m_LocalRotation.z
-      value: -0.7071068
+    - target: {fileID: 7299973858523194273, guid: eb4c32e600aae4b05a474384ef25f564, type: 3}
+      propertyPath: m_Size.y
+      value: 0.5
       objectReference: {fileID: 0}
-    - target: {fileID: 7838434160424782943, guid: eb4c32e600aae4b05a474384ef25f564, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: -90
+    - target: {fileID: 7299973858523194273, guid: eb4c32e600aae4b05a474384ef25f564, type: 3}
+      propertyPath: m_Offset.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7299973858523194273, guid: eb4c32e600aae4b05a474384ef25f564, type: 3}
+      propertyPath: m_Offset.y
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

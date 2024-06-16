@@ -6,12 +6,23 @@ public class AttackBase : MonoBehaviour
 {
     public List<Transform> launchPoints;
     public GameObject projectile;
+    public float attackCooldown = 1f;
+    private float lastAttackTime = 0f;
 
-    public void Attack()
+    public void TryAttack()
+    {
+        if (Time.time >= lastAttackTime + attackCooldown)
+        {
+            Attack();
+            lastAttackTime = Time.time;
+        }
+    }
+
+    private void Attack()
     {
         foreach (var launchPoint in launchPoints)
         {
             Instantiate(projectile, launchPoint.position, launchPoint.rotation);
-        };
+        }
     }
 }
