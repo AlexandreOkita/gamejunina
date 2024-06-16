@@ -7,15 +7,11 @@ public class AttackBase : MonoBehaviour
     public List<Transform> launchPoints;
     public GameObject projectile;
 
-    // Update is called once per frame
-    void Update()
+    public void Attack()
     {
-        if (Input.GetKeyDown(KeyCode.Space))
+        foreach (var launchPoint in launchPoints)
         {
-            foreach (var launchPoint in launchPoints)
-            {
-                Instantiate(projectile, launchPoint.position, launchPoint.rotation);
-            };
-        }
+            Instantiate(projectile, launchPoint.position, launchPoint.rotation);
+        };
     }
 }
