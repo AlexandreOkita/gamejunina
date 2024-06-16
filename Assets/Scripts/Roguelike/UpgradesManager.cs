@@ -27,7 +27,9 @@ public class UpgradesManager : MonoBehaviour
             List<AttributeUpgrade> selectedUpgrades = new List<AttributeUpgrade>();
             while (selectedUpgrades.Count < upgradeButtons.Count)
             {
-                AttributeUpgrade randomUpgrade = upgrades[UnityEngine.Random.Range(0, upgrades.Count)];
+                System.Random random = new System.Random();
+                var rUpgradeIndex = random.Next(0, upgrades.Count);
+                AttributeUpgrade randomUpgrade = upgrades[rUpgradeIndex];
                 if (!selectedUpgrades.Contains(randomUpgrade))
                 {
                     selectedUpgrades.Add(randomUpgrade);
@@ -36,7 +38,7 @@ public class UpgradesManager : MonoBehaviour
 
             for (int i = 0; i < upgradeButtons.Count; i++)
             {
-                upgradeButtons[i].Setup(upgrades[i], players[currentPlayerIndex], () =>
+                upgradeButtons[i].Setup(selectedUpgrades[i], players[currentPlayerIndex], () =>
                 {
                     currentPlayerIndex++;
                     ShowUpgrades();

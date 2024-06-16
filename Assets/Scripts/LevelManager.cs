@@ -21,7 +21,7 @@ public class LevelManager : MonoBehaviour
     {
         currentWave++;
         Debug.Log($"Começando próxima wave!!! - {currentWave}");
-        StartCoroutine(StartNextWaveAfterDelay(20f));
+        StartCoroutine(StartNextWaveAfterDelay(1f));
         upgradesManager.ShowUpgrades();
     }
 
