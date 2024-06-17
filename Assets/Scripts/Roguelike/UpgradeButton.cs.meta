@@ -3,7 +3,17 @@ guid: 87427a1a4a94e43c2a9a777c66b1b8fd
 MonoImporter:
   externalObjects: {}
   serializedVersion: 2
-  defaultReferences: []
+  defaultReferences:
+  - title: {instanceID: 0}
+  - description: {instanceID: 0}
+  - image: {instanceID: 0}
+  - button: {instanceID: 0}
+  - source: {instanceID: 0}
+  - healthSound: {fileID: 8300000, guid: 254a08589facd1b4d80be8c7129c4e62, type: 3}
+  - attackSpeedSound: {fileID: 8300000, guid: fbfcdf19860ce594d854f59a6879e603, type: 3}
+  - damageSound: {fileID: 8300000, guid: cdaf055764d62b04c88ca20bf50200e1, type: 3}
+  - tripleWeaponSound: {fileID: 8300000, guid: be5ded7498abb7249b0cc4c0ec868a83, type: 3}
+  - allDirWeaponSound: {fileID: 8300000, guid: 98ae75464cdd4b44eb150939575a2682, type: 3}
   executionOrder: 0
   icon: {instanceID: 0}
   userData: 

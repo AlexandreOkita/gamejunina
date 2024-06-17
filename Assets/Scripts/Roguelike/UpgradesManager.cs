@@ -1,53 +1,54 @@
-using System;
-using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class UpgradesManager : MonoBehaviour
+namespace Roguelike
 {
-    [SerializeField] private List<UpgradeButton> upgradeButtons;
-    [SerializeField] private Transform upgradePanel; // Painel onde as opções de melhorias são exibidas
-    [SerializeField] private List<AttributeUpgrade> upgrades;
-    [SerializeField] Image background;
-    private int currentPlayerIndex;
-
-    public void ShowUpgrades()
+    public class UpgradesManager : MonoBehaviour
     {
-        GameManager gm = GameManager.Instance;
-        var players = gm.Players.ToList();
-        if (currentPlayerIndex >= players.Count)
+        [SerializeField] private List<UpgradeButton> upgradeButtons;
+        [SerializeField] private Transform upgradePanel; // Painel onde as opções de melhorias são exibidas
+        [SerializeField] private List<AttributeUpgrade> upgrades;
+        [SerializeField] Image background;
+        private int _currentPlayerIndex;
+
+        public void ShowUpgrades()
         {
-            Time.timeScale = 1;
-            upgradePanel.gameObject.SetActive(false);
-            currentPlayerIndex = 0;
-        } else
-        {
-            Time.timeScale = 0;
-            background.color = players[currentPlayerIndex].PlayerColor;
-            List<AttributeUpgrade> selectedUpgrades = new List<AttributeUpgrade>();
-            while (selectedUpgrades.Count < upgradeButtons.Count)
+            GameManager gm = GameManager.Instance;
+            var players = gm.Players.ToList();
+            if (_currentPlayerIndex >= players.Count)
             {
-                System.Random random = new System.Random();
-                var rUpgradeIndex = random.Next(0, upgrades.Count);
-                AttributeUpgrade randomUpgrade = upgrades[rUpgradeIndex];
-                if (!selectedUpgrades.Contains(randomUpgrade))
+                Time.timeScale = 1;
+                upgradePanel.gameObject.SetActive(false);
+                _currentPlayerIndex = 0;
+            } else
+            {
+                Time.timeScale = 0;
+                background.color = players[_currentPlayerIndex].PlayerColor;
+                List<AttributeUpgrade> selectedUpgrades = new List<AttributeUpgrade>();
+                while (selectedUpgrades.Count < upgradeButtons.Count)
                 {
-                    selectedUpgrades.Add(randomUpgrade);
+                    System.Random random = new System.Random();
+                    var rUpgradeIndex = random.Next(0, upgrades.Count);
+                    AttributeUpgrade randomUpgrade = upgrades[rUpgradeIndex];
+                    if (!selectedUpgrades.Contains(randomUpgrade))
+                    {
+                        selectedUpgrades.Add(randomUpgrade);
+                    }
                 }
-            }
 
-            for (int i = 0; i < upgradeButtons.Count; i++)
-            {
-                upgradeButtons[i].Setup(selectedUpgrades[i], players[currentPlayerIndex], () =>
+                for (int i = 0; i < upgradeButtons.Count; i++)
                 {
-                    currentPlayerIndex++;
-                    ShowUpgrades();
-                });
-            }
+                    upgradeButtons[i].Setup(selectedUpgrades[i], players[_currentPlayerIndex], () =>
+                    {
+                        _currentPlayerIndex++;
+                        ShowUpgrades();
+                    });
+                }
 
-            upgradePanel.gameObject.SetActive(true);
+                upgradePanel.gameObject.SetActive(true);
+            }
         }
     }
 }

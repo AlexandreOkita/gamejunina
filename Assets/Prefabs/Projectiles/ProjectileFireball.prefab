@@ -12,6 +12,14 @@ PrefabInstance:
       propertyPath: m_Controller
       value: 
       objectReference: {fileID: 22100000, guid: 907820835012f43a9907204a333c19d1, type: 2}
+    - target: {fileID: 2341378888336201182, guid: 4ed0206bf714845b79e838d5a143f1fc, type: 3}
+      propertyPath: speed
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 2341378888336201182, guid: 4ed0206bf714845b79e838d5a143f1fc, type: 3}
+      propertyPath: damage
+      value: 10
+      objectReference: {fileID: 0}
     - target: {fileID: 4266226305314906799, guid: 4ed0206bf714845b79e838d5a143f1fc, type: 3}
       propertyPath: m_Sprite
       value: 

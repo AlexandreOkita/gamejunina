@@ -56,6 +56,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: AttackWandFireball
       objectReference: {fileID: 0}
+    - target: {fileID: 2748357768391517215, guid: c5815d17fe132403c89b7fa13f0199f7, type: 3}
+      propertyPath: m_Volume
+      value: 0.619
+      objectReference: {fileID: 0}
+    - target: {fileID: 2748357768391517215, guid: c5815d17fe132403c89b7fa13f0199f7, type: 3}
+      propertyPath: m_audioClip
+      value: 
+      objectReference: {fileID: 8300000, guid: bbe2688a39ed80149807e14839201127, type: 3}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []

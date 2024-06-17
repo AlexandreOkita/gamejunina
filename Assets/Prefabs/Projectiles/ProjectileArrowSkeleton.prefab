@@ -50,7 +50,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4571727327928719484, guid: eb4c32e600aae4b05a474384ef25f564, type: 3}
       propertyPath: m_Name
-      value: ProjectileArrow
+      value: ProjectileArrowSkeleton
       objectReference: {fileID: 0}
     - target: {fileID: 5032107089298473117, guid: eb4c32e600aae4b05a474384ef25f564, type: 3}
       propertyPath: m_Size.x
@@ -69,8 +69,12 @@ PrefabInstance:
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6818224666558363628, guid: eb4c32e600aae4b05a474384ef25f564, type: 3}
+      propertyPath: speed
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 6818224666558363628, guid: eb4c32e600aae4b05a474384ef25f564, type: 3}
       propertyPath: damage
-      value: 20
+      value: 12
       objectReference: {fileID: 0}
     - target: {fileID: 7299973858523194273, guid: eb4c32e600aae4b05a474384ef25f564, type: 3}
       propertyPath: m_Size.x

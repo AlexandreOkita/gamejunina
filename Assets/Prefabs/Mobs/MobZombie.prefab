@@ -131,8 +131,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a765f3dc6dcb348a2a1489e967af69fe, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 1
-  attackRange: 1
+  speed: 1.5
+  attackRange: 0.7
   weapon: {fileID: 6796986320967268544}
   _animator: {fileID: 1606007760955267496}
 --- !u!4 &6536702361677835138 stripped
