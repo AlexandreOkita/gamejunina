@@ -17,12 +17,17 @@ public class PlayerController : MonoBehaviour
 
     private float attackMod = 1f;
     private float attackSpeedMod = 1f;
+    private float _regen = 0;
 
     void Start()
     {
         _playerAim.UpdateAttack(_initialWeapon);
         _health.OnDeath += DisablePlayer;
         _health.OnDeath += () => _playerAnimator.SetTrigger(DEAD_PARAMETER_HASH);
+        LevelManager.Instance.NewLevelStarted += () =>
+        {
+            _health.CurrentHealth += _regen;
+        };
     }
 
     void DisablePlayer()
@@ -60,12 +65,22 @@ public class PlayerController : MonoBehaviour
 
     public void upgradeAttackSpeed()
     {
-        attackSpeedMod *= 0.9f;
+        attackSpeedMod *= 0.5f;
     }
 
     public void upgradeHealth()
     {
         _health.SetMaxHealth(_health.CurrentHealth + 25);
         _health.CurrentHealth += 25;
+    }
+
+    public void upgradeSpeed()
+    {
+        _movement.UpdateSpeed((float) 1.5);
+    }
+
+    public void upgradeRegen()
+    {
+        _regen += 25;
     }
 }

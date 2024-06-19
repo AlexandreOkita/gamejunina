@@ -1153,10 +1153,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: UpgradeButtonsPanel
       objectReference: {fileID: 0}
-    - target: {fileID: 7682173304960040220, guid: bbe3bd42bf05245a79483257ca45c99b, type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []

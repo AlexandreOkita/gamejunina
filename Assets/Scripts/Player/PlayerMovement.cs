@@ -14,6 +14,11 @@ public class PlayerMovement : MonoBehaviour
 
     public void SetupBounds(Bounds bounds) => _bounds = bounds;
 
+    public void UpdateSpeed(float mod)
+    {
+        _speed *= mod;
+    }
+
     void Update()
     {
         var delta = _playerInput.actions["Move"].ReadValue<Vector2>();

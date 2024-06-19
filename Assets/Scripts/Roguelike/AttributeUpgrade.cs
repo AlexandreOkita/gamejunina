@@ -19,5 +19,7 @@ public enum UpgradeType
     DAMAGE,
     ATTACK_SPEED,
     TRIPLE_WEAPON,
-    ALL_DIRECTIONS
+    ALL_DIRECTIONS,
+    SPEED,
+    REGEN
 }

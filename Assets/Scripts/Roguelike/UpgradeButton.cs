@@ -60,6 +60,12 @@ namespace Roguelike
                         //source.clip = allDirWeaponSound;
                         //source.Play();
                         break;
+                    case UpgradeType.SPEED:
+                        player.upgradeSpeed();
+                        break;
+                    case UpgradeType.REGEN:
+                        player.upgradeRegen();
+                        break;
                 }
                 selected?.Invoke();
             });
