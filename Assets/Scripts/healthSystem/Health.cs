@@ -11,8 +11,10 @@ namespace healthSystem
 
         public event Action<float> OnDamageReceived;
         public event Action OnDeath;
+        public event Action<float> OnHealthHealed;
+        public event Action<float> OnMaxHealthUpdated;
         
-        public float CurrentHealth { get; set; }
+        public float CurrentHealth { get; private set; }
         public float MaxHealth => currentMaxHealth;
         public bool IsAlive => CurrentHealth > 0;
 
@@ -23,12 +25,17 @@ namespace healthSystem
         {
             currentMaxHealth = maxHealthBase;
             CurrentHealth = currentMaxHealth;
+            OnMaxHealthUpdated?.Invoke(currentMaxHealth);
             _logger = new HealthLogger(this);
         }
 
         void Update()
         {
-            if (Input.GetKeyDown(KeyCode.O)) OnDeath?.Invoke();
+            if (Input.GetKeyDown(KeyCode.O))
+            {
+                if (!isPlayer)
+                OnDeath?.Invoke();
+            }
         }
 
         public void SetMaxHealth(float val)
@@ -36,6 +43,20 @@ namespace healthSystem
             var diff = val - currentMaxHealth;
             currentMaxHealth = val;
             CurrentHealth += diff;
+            OnMaxHealthUpdated?.Invoke(val);
+        }
+
+        public void HealDamage(float heal)
+        {
+            if (CurrentHealth <= 0) return; // Already dead
+
+            CurrentHealth = Mathf.Min(MaxHealth, CurrentHealth + heal);
+            OnHealthHealed?.Invoke(heal);
+            if (CurrentHealth <= 0)
+            {
+                CurrentHealth = 0;
+                OnDeath?.Invoke();
+            }
         }
 
         public void TakeDamage(float damage)

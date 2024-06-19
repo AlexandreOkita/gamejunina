@@ -1,5 +1,6 @@
 using System;
 using healthSystem;
+using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -9,6 +10,7 @@ namespace DefaultNamespace
     {
         [SerializeField] RectTransform _healthUi;
         [SerializeField] Image _healthBar;
+        [SerializeField] TMP_Text _lifeText;
 
         Health _bindedHealth;
 
@@ -18,11 +20,15 @@ namespace DefaultNamespace
             _bindedHealth = health;
             _healthBar.color = color;
             health.OnDamageReceived += UpdateUi;
+            health.OnHealthHealed += UpdateUi;
+            health.OnMaxHealthUpdated += UpdateUi;
+            _lifeText.text = $"{_bindedHealth.CurrentHealth}/{_bindedHealth.MaxHealth}";
         }
 
         void UpdateUi(float _)
         {
             _healthUi.sizeDelta = new Vector2( 32f * _bindedHealth.CurrentHealth / _bindedHealth.MaxHealth, _healthUi.sizeDelta.y);
+            _lifeText.text = $"{_bindedHealth.CurrentHealth}/{_bindedHealth.MaxHealth}";
         }
 
         void OnDestroy()

@@ -26,7 +26,7 @@ public class PlayerController : MonoBehaviour
         _health.OnDeath += () => _playerAnimator.SetTrigger(DEAD_PARAMETER_HASH);
         LevelManager.Instance.NewLevelStarted += () =>
         {
-            _health.CurrentHealth += _regen;
+            _health.HealDamage(_regen);
         };
     }
 
@@ -70,8 +70,7 @@ public class PlayerController : MonoBehaviour
 
     public void upgradeHealth()
     {
-        _health.SetMaxHealth(_health.CurrentHealth + 25);
-        _health.CurrentHealth += 25;
+        _health.SetMaxHealth(_health.MaxHealth + 25);
     }
 
     public void upgradeSpeed()
