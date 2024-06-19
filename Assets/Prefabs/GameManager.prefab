@@ -147,7 +147,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ec8eb7a2b3f414816b40737caa6c9af1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  startLevel: 0
+  startLevel: 1
   waveManager: {fileID: 8472767872902527277}
   upgradesManager: {fileID: 0}
 --- !u!1 &4369714678532683730
