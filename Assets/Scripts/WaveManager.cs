@@ -18,8 +18,8 @@ public class WaveManager : MonoBehaviour
     {
         waveFinished = false;
         var random = new System.Random();
-        List<Mob> zombiesList = Enumerable.Repeat(zombiePrefab, GetZombiesQtt(currentWave)).ToList();
-        List<Mob> skeletonList = Enumerable.Repeat(skeletonPrefab, GetSkeletonsQtt(currentWave)).ToList();
+        List<MobProperties> zombiesList = GetMobQueue(3 * currentWave + 2, zombiePrefab, currentWave);
+        List<MobProperties> skeletonList = GetMobQueue(2 * currentWave - 4, skeletonPrefab, currentWave);
 
 
         zombiesList.AddRange(skeletonList);
@@ -51,33 +51,27 @@ public class WaveManager : MonoBehaviour
         {
             waveFinished = true;
             WaveFinished?.Invoke();
-            resetSpawners();
+            ResetSpawners();
             Debug.Log("Wave Finished!");
         }
     }
 
-    private int GetSkeletonsQtt(int currentWave)
-    {
-        // A partir da quarta rodada, nasce 2 esqueletos extras por rodada.
-        int skeletonsQtt = 2 * currentWave - 4;
-        if (skeletonsQtt < 0)
-        {
-            return 0;
-        }
-        return skeletonsQtt * GameManager.Instance.Players.Count;
-    }
-
-    private int GetZombiesQtt(int currentWave)
-    {
-        // Nasce 3 zumbis extras por rodada.
-        return (3 * currentWave + 4) * GameManager.Instance.Players.Count;
-    }
-
-    private void resetSpawners()
+    private void ResetSpawners()
     {
         spawners.ForEach(spawner =>
         {
             spawner.ResetSpawner();
         });
+    }
+
+    private float GetHealthMod(int wave)
+    {
+        return (float)(1 + ((wave - 1) * 0.1));
+    }
+
+    private List<MobProperties> GetMobQueue(int baseQtt, Mob mob, int currentWave)
+    {
+        var mobQtt = Mathf.Max(baseQtt, 0) * GameManager.Instance.Players.Count;
+        return Enumerable.Repeat(new MobProperties(mob, GetHealthMod(currentWave)), mobQtt).ToList();
     }
 }

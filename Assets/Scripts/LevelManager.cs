@@ -9,13 +9,20 @@ public class LevelManager : MonoBehaviour
     [SerializeField] UpgradesManager upgradesManager;
     //[SerializeField] RoguelikeManager roguelikeManager;
     private int currentWave;
+    private bool gameStarted = false;
     // Start is called before the first frame update
-    void Start()
+    void Update()
     {
-        currentWave = startLevel;
-        waveManager.WaveFinished += OnWaveFinished;
-        waveManager.StartWave(currentWave);
+        if (GameManager.Instance.Players.Count > 0 && !gameStarted)
+        {
+            gameStarted = true;
+            currentWave = startLevel;
+            waveManager.WaveFinished += OnWaveFinished;
+            waveManager.StartWave(currentWave);
+        }
     }
+
+
 
     private void OnWaveFinished()
     {

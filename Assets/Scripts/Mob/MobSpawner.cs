@@ -6,7 +6,7 @@ public class Spawner : MonoBehaviour
 {
     [SerializeField] private float cooldown = 10f;
     private int mobsSpawned = 0;
-    private List<Mob> mobQueue = new();
+    private List<MobProperties> mobQueue = new();
     public int RemainingMobs { get; private set; }
 
     public void StartSpawning()
@@ -21,7 +21,7 @@ public class Spawner : MonoBehaviour
         mobQueue = new();
     }
 
-    public void AddMobToQueue(Mob mob)
+    public void AddMobToQueue(MobProperties mob)
     {
         mobQueue.Add(mob);
     }
@@ -30,7 +30,9 @@ public class Spawner : MonoBehaviour
     {
         while (mobsSpawned < mobQueue.Count)
         {
-            Mob spawnedMob = Instantiate(mobQueue[mobsSpawned], transform.position, Quaternion.identity);
+            var mobProps = mobQueue[mobsSpawned];
+            Mob spawnedMob = Instantiate(mobProps.Mob, transform.position, Quaternion.identity);
+            spawnedMob.SetHealth(spawnedMob.Health.MaxHealth * mobProps.HealthMod);
             spawnedMob.Health.OnDeath += () =>
             {
                 RemainingMobs--;

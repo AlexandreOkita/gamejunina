@@ -65,7 +65,7 @@ public class PlayerController : MonoBehaviour
 
     public void upgradeHealth()
     {
-        _health.maxHealth += 25;
+        _health.SetMaxHealth(_health.CurrentHealth + 25);
         _health.CurrentHealth += 25;
     }
 }

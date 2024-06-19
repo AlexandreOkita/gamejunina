@@ -91,7 +91,11 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: -590250532293199190, guid: 22d7d296e656e47bc9781aa6c7aed599, type: 3}
       propertyPath: maxHealth
-      value: 15
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: -590250532293199190, guid: 22d7d296e656e47bc9781aa6c7aed599, type: 3}
+      propertyPath: maxHealthBase
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 868066285380567359, guid: 22d7d296e656e47bc9781aa6c7aed599, type: 3}
       propertyPath: m_Size.x

@@ -15,7 +15,7 @@ namespace healthSystem
         }
 
         void LogDeath() => Debug.Log($"GameObject {_health.name} morreu", _health);
-        void LogDamage(float damage) => Debug.Log($"GameObject {_health.name} took {damage} damage", _health);
+        void LogDamage(float damage) => Debug.Log($"GameObject {_health.name} took {damage} damage. Current health {_health.CurrentHealth}", _health);
 
         public void Dispose()
         {
