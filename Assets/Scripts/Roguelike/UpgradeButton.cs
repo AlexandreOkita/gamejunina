@@ -66,6 +66,9 @@ namespace Roguelike
                     case UpgradeType.REGEN:
                         player.upgradeRegen();
                         break;
+                    case UpgradeType.WEAPON_PIERCE:
+                        player.UpdateWeapon(upgrade.weapon);
+                        break;
                 }
                 selected?.Invoke();
             });

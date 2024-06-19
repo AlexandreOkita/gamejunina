@@ -8,6 +8,7 @@ public class ProjectileMovement : MonoBehaviour, ITeleportable
     [SerializeField] private float speed = 10f;
     [SerializeField] public float damage = 10f;
     [SerializeField] private bool hitMobs = true;
+    [SerializeField] private bool pierce = false;
 
     private bool _isDisposing;
 
@@ -39,7 +40,7 @@ public class ProjectileMovement : MonoBehaviour, ITeleportable
         {
             health.TakeDamage(damage);
         }
-        StartDestroy();
+        if (!pierce) StartDestroy();
     }
 
     void StartDestroy()

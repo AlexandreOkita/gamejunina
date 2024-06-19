@@ -1025,10 +1025,6 @@ PrefabInstance:
       value: GameManager
       objectReference: {fileID: 0}
     - target: {fileID: 7950830739098804088, guid: 97bec431de0754ec7ae7cba7ad74c32e, type: 3}
-      propertyPath: startLevel
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 7950830739098804088, guid: 97bec431de0754ec7ae7cba7ad74c32e, type: 3}
       propertyPath: upgradesManager
       value: 
       objectReference: {fileID: 1907552117}

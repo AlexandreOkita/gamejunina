@@ -21,5 +21,6 @@ public enum UpgradeType
     TRIPLE_WEAPON,
     ALL_DIRECTIONS,
     SPEED,
-    REGEN
+    REGEN,
+    WEAPON_PIERCE
 }
