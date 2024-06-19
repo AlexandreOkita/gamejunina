@@ -50,7 +50,6 @@ public static class MobExtensions
 {
     public static Mob WithHealthModified(this Mob mob, float mod)
     {
-        Debug.Log($"Updating health from {mob.Health.MaxHealth} to {mob.Health.MaxHealth * mod}");
         mob.SetHealth(mob.Health.MaxHealth * mod);
         return mob;
     }

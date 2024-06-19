@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using Roguelike;
 using UnityEngine;
@@ -7,10 +8,32 @@ public class LevelManager : MonoBehaviour
     [SerializeField] int startLevel = 0;
     [SerializeField] WaveManager waveManager;
     [SerializeField] UpgradesManager upgradesManager;
-    //[SerializeField] RoguelikeManager roguelikeManager;
+
+    public Action NewLevelStarted;
+
     private int currentWave;
     private bool gameStarted = false;
-    // Start is called before the first frame update
+
+    static LevelManager _instance;
+
+    public static LevelManager Instance
+    {
+        get
+        {
+            if (_instance == null)
+            {
+                _instance = FindObjectOfType<LevelManager>();
+            }
+
+            return _instance;
+        }
+
+        private set
+        {
+            _instance = value;
+        }
+    }
+
     void Update()
     {
         if (GameManager.Instance.Players.Count > 0 && !gameStarted)
@@ -26,14 +49,10 @@ public class LevelManager : MonoBehaviour
 
     private void OnWaveFinished()
     {
+        NewLevelStarted.Invoke();
         currentWave++;
         Debug.Log($"Começando próxima wave!!! - {currentWave}");
         StartCoroutine(StartNextWaveAfterDelay(5f));
-        var projectiles = FindObjectsOfType<ProjectileMovement>();
-        foreach(var p in projectiles)
-        {
-            Destroy(p.gameObject);
-        }
         upgradesManager.ShowUpgrades();
     }
 
