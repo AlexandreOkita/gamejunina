@@ -4,24 +4,20 @@ using UnityEngine;
 using System;
 
 [CreateAssetMenu(menuName = "Game/Upgrades")]
-public class AttributeUpgrade : ScriptableObject
+public abstract class AttributeUpgrade : ScriptableObject
 {
     public string title;
     public string description;
-    public UpgradeType type;
     public Sprite sprite;
-    public AttackBase weapon;
     public AudioClip sound;
+
+    public abstract UpgradeType GetUpgradeType();
+    public abstract void Apply(PlayerController player);
 }
 
 public enum UpgradeType
 {
-    HEALTH,
-    DAMAGE,
-    ATTACK_SPEED,
-    TRIPLE_WEAPON,
-    ALL_DIRECTIONS,
-    SPEED,
-    REGEN,
-    WEAPON_PIERCE
+    ATTRIBUTE,
+    WEAPON,
+    SKILL
 }

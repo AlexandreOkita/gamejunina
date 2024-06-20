@@ -9,12 +9,12 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 44bdc2eb23c5a4097ad146552c9d5bae, type: 3}
-  m_Name: AllDirectionsWeapon
+  m_Script: {fileID: 11500000, guid: 67af7e33770bf4c03a847b980400af68, type: 3}
+  m_Name: AllDirectionsWeaponUpgrade
   m_EditorClassIdentifier: 
   title: "Arma: Todas Dire\xE7\xF5es"
   description: "Pra qu\xEA mirar? Ao contr\xE1rio que muitos pensam, na verdade todos
-    s\xE3o seus inimigos."
-  type: 4
+    s\xE3o seus inimigos. "
   sprite: {fileID: 21300000, guid: c02b61840bd13b6438163e5c58fca08d, type: 3}
+  sound: {fileID: 8300000, guid: 98ae75464cdd4b44eb150939575a2682, type: 3}
   weapon: {fileID: 1259441346986798469, guid: 4fc30aaaecd31004cad7d2dba3769076, type: 3}

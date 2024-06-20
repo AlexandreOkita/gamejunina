@@ -9,12 +9,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 44bdc2eb23c5a4097ad146552c9d5bae, type: 3}
-  m_Name: PierceWeaponUpgrade
+  m_Script: {fileID: 11500000, guid: 809119d5d922246a0be90d50b654e68d, type: 3}
+  m_Name: SpeedAttributeUpgrade
   m_EditorClassIdentifier: 
-  title: 'Arma: Perfurador'
-  description: "A estupidez humana \xE9 a \xFAnica coisa que d\xE1 uma ideia do infinito
-    - Ernest Renan"
-  type: 7
+  title: Aumentar Velocidade
+  description: "Est\xE1 dif\xEDcil fugir de tantos proj\xE9teis e monstros?"
   sprite: {fileID: 21300000, guid: 71c34e3cab43d5e4bb569ef7cbabf633, type: 3}
-  weapon: {fileID: 2221238186260920995, guid: 2dc0064e5093047d8b228cd0a443c588, type: 3}
+  sound: {fileID: 8300000, guid: 24790a61c06b47b4d844d77dd51c03c5, type: 3}
+  speedBonus: 1.5

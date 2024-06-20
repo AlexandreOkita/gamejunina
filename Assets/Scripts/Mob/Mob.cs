@@ -57,8 +57,8 @@ public static class MobExtensions
 
 public class MobProperties
 {
-    public float HealthMod;
-    public Mob Mob;
+    public readonly float HealthMod;
+    public readonly Mob Mob;
 
     public MobProperties(Mob mob, float healthMod)
     {

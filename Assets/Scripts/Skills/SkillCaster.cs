@@ -27,19 +27,19 @@ public class SkillCaster : MonoBehaviour
         }
     }
 
-    public void OnSkill1(InputValue value)
+    void OnSkill1(InputValue value)
     {
         Debug.Log("Casting skill 1");
         skill1?.Cast();
     }
 
-    public void OnSkill2(InputValue value)
+    void OnSkill2(InputValue value)
     {
         Debug.Log("Casting skill 2");
         skill2?.Cast();
     }
 
-    public void OnSkill3(InputValue value)
+    void OnSkill3(InputValue value)
     {
         Debug.Log("Casting skill 3");
         skill3?.Cast();

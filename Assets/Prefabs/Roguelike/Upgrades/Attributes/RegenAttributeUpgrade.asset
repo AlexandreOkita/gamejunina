@@ -9,12 +9,12 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 44bdc2eb23c5a4097ad146552c9d5bae, type: 3}
-  m_Name: SpeedUpgrade
+  m_Script: {fileID: 11500000, guid: 94243ec4adc0449068a896e125841ec4, type: 3}
+  m_Name: RegenAttributeUpgrade
   m_EditorClassIdentifier: 
-  title: Aumentar Velocidade
-  description: "Est\xE1 dif\xEDcil fugir de tantos proj\xE9teis e monstros? Pegue
-    isso seu covarde!"
-  type: 5
+  title: Regenerar Vida
+  description: "Essa belezinha vai fazer voc\xEA recuperar vida toda wave! Agora
+    voc\xEA tem uma desculpa para jogar mal."
   sprite: {fileID: 21300000, guid: 71c34e3cab43d5e4bb569ef7cbabf633, type: 3}
-  weapon: {fileID: 0}
+  sound: {fileID: 8300000, guid: 24790a61c06b47b4d844d77dd51c03c5, type: 3}
+  regenBonus: 25

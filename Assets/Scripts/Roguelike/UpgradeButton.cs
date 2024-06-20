@@ -31,33 +31,7 @@ namespace Roguelike
             {
                 source.clip = upgrade.sound;
                 source.Play();
-                switch (upgrade.type)
-                {
-                    case UpgradeType.HEALTH:
-                        player.upgradeHealth();
-                        break;
-                    case UpgradeType.ATTACK_SPEED:
-                        player.upgradeAttackSpeed();
-                        break;
-                    case UpgradeType.DAMAGE:
-                        player.upgradeAttack();
-                        break;
-                    case UpgradeType.TRIPLE_WEAPON:
-                        player.UpdateWeapon(upgrade.weapon);
-                        break;
-                    case UpgradeType.ALL_DIRECTIONS:
-                        player.UpdateWeapon(upgrade.weapon);
-                        break;
-                    case UpgradeType.SPEED:
-                        player.upgradeSpeed();
-                        break;
-                    case UpgradeType.REGEN:
-                        player.upgradeRegen();
-                        break;
-                    case UpgradeType.WEAPON_PIERCE:
-                        player.UpdateWeapon(upgrade.weapon);
-                        break;
-                }
+                upgrade.Apply(player);
                 selected?.Invoke();
             });
         }

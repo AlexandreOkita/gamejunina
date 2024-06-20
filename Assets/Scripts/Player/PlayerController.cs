@@ -6,34 +6,31 @@ public class PlayerController : MonoBehaviour
 {
     static int DEAD_PARAMETER_HASH = Animator.StringToHash("Dead");
 
-    [SerializeField] Health _health;
+    
     [SerializeField] AttackBase _initialWeapon;
     [SerializeField] PlayerAim _playerAim;
     [SerializeField] Animator _playerAnimator;
-    [SerializeField] PlayerMovement _movement;
+    [SerializeField] PlayerAttributes _attributes;
     [SerializeField] SkillCaster skillCaster;
 
-    public Health Health => _health;
+    public PlayerAttributes Attributes => _attributes;
+    public Health Health => _attributes.Health;
     public Color PlayerColor { get; private set; }
-
-    private float attackMod = 1f;
-    private float attackSpeedMod = 1f;
-    private float _regen = 0;
 
     void Start()
     {
         _playerAim.UpdateAttack(_initialWeapon);
-        _health.OnDeath += DisablePlayer;
-        _health.OnDeath += () => _playerAnimator.SetTrigger(DEAD_PARAMETER_HASH);
+        _attributes.Health.OnDeath += DisablePlayer;
+        _attributes.Health.OnDeath += () => _playerAnimator.SetTrigger(DEAD_PARAMETER_HASH);
         LevelManager.Instance.NewLevelStarted += () =>
         {
-            _health.HealDamage(_regen);
+            _attributes.Health.HealDamage(_attributes.Regen);
         };
     }
 
     void DisablePlayer()
     {
-        _movement.enabled = false;
+        _attributes.Movement.enabled = false;
         _playerAim.AimParent.gameObject.SetActive(false);
         _playerAim.enabled = false;
     }
@@ -43,7 +40,7 @@ public class PlayerController : MonoBehaviour
         PlayerColor = playerData.Color;
         _playerAim.SetIndicatorStyle(PlayerColor);
         _playerAnimator.runtimeAnimatorController = playerData.AnimatorController;
-        _movement.SetupBounds(playerBounds);
+        _attributes.Movement.SetupBounds(playerBounds);
     }
 
     public void UpdateWeapon(AttackBase weapon)
@@ -56,31 +53,6 @@ public class PlayerController : MonoBehaviour
         if (!Health.IsAlive) return;
         if (Time.timeScale < 0.1f) return;
 
-        _playerAim.CurrentAttack.TryAttack(attackSpeedMod, attackMod);
-    }
-
-    public void upgradeAttack()
-    {
-        attackMod += 0.5f;
-    }
-
-    public void upgradeAttackSpeed()
-    {
-        attackSpeedMod *= 0.5f;
-    }
-
-    public void upgradeHealth()
-    {
-        _health.SetMaxHealth(_health.MaxHealth + 25);
-    }
-
-    public void upgradeSpeed()
-    {
-        _movement.UpdateSpeed((float) 1.5);
-    }
-
-    public void upgradeRegen()
-    {
-        _regen += 25;
+        _playerAim.CurrentAttack.TryAttack(Attributes.AttackSpeed, Attributes.Attack);
     }
 }
