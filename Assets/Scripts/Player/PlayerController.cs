@@ -11,6 +11,7 @@ public class PlayerController : MonoBehaviour
     [SerializeField] PlayerAim _playerAim;
     [SerializeField] Animator _playerAnimator;
     [SerializeField] PlayerMovement _movement;
+    [SerializeField] SkillCaster skillCaster;
 
     public Health Health => _health;
     public Color PlayerColor { get; private set; }

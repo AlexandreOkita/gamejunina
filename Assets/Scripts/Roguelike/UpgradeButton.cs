@@ -5,6 +5,7 @@ using UnityEngine.UI;
 
 namespace Roguelike
 {
+    [RequireComponent(typeof(AudioSource))]
     public class UpgradeButton : MonoBehaviour
     {
         [SerializeField] TMP_Text title;
@@ -12,13 +13,8 @@ namespace Roguelike
         [SerializeField] Image image;
         [SerializeField] Button button;
 
-        [SerializeField] AudioSource source;
-        [SerializeField] AudioClip healthSound;
-        [SerializeField] AudioClip attackSpeedSound;
-        [SerializeField] AudioClip damageSound;
-        [SerializeField] AudioClip tripleWeaponSound;
-        [SerializeField] AudioClip allDirWeaponSound;
-    
+        private AudioSource source;
+
         // Start is called before the first frame update
         private void Start()
         {
@@ -33,32 +29,24 @@ namespace Roguelike
             button.onClick.RemoveAllListeners();
             button.onClick.AddListener(() =>
             {
-                switch(upgrade.type)
+                source.clip = upgrade.sound;
+                source.Play();
+                switch (upgrade.type)
                 {
                     case UpgradeType.HEALTH:
                         player.upgradeHealth();
-                        //source.clip = healthSound;
-                        //source.Play();
                         break;
                     case UpgradeType.ATTACK_SPEED:
                         player.upgradeAttackSpeed();
-                        //source.clip = attackSpeedSound;
-                        //source.Play();
                         break;
                     case UpgradeType.DAMAGE:
                         player.upgradeAttack();
-                        //source.clip = damageSound;
-                        //source.Play();
                         break;
                     case UpgradeType.TRIPLE_WEAPON:
                         player.UpdateWeapon(upgrade.weapon);
-                        //source.clip = tripleWeaponSound;
-                        //source.Play();
                         break;
                     case UpgradeType.ALL_DIRECTIONS:
                         player.UpdateWeapon(upgrade.weapon);
-                        //source.clip = allDirWeaponSound;
-                        //source.Play();
                         break;
                     case UpgradeType.SPEED:
                         player.upgradeSpeed();

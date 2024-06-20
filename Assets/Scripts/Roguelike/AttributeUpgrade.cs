@@ -11,6 +11,7 @@ public class AttributeUpgrade : ScriptableObject
     public UpgradeType type;
     public Sprite sprite;
     public AttackBase weapon;
+    public AudioClip sound;
 }
 
 public enum UpgradeType
