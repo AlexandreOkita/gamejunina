@@ -1149,6 +1149,42 @@ PrefabInstance:
       propertyPath: m_Name
       value: UpgradeButtonsPanel
       objectReference: {fileID: 0}
+    - target: {fileID: 8015013780553983892, guid: bbe3bd42bf05245a79483257ca45c99b, type: 3}
+      propertyPath: upgrades.Array.size
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 8015013780553983892, guid: bbe3bd42bf05245a79483257ca45c99b, type: 3}
+      propertyPath: upgrades.Array.data[0]
+      value: 
+      objectReference: {fileID: 11400000, guid: ab833c797b574438bb5dccaa7576318f, type: 2}
+    - target: {fileID: 8015013780553983892, guid: bbe3bd42bf05245a79483257ca45c99b, type: 3}
+      propertyPath: upgrades.Array.data[1]
+      value: 
+      objectReference: {fileID: 11400000, guid: 0f11282186cfd47ccb7cb6405ea0845c, type: 2}
+    - target: {fileID: 8015013780553983892, guid: bbe3bd42bf05245a79483257ca45c99b, type: 3}
+      propertyPath: upgrades.Array.data[2]
+      value: 
+      objectReference: {fileID: 11400000, guid: 11c7854f00c634f43b6005fc19fe7af0, type: 2}
+    - target: {fileID: 8015013780553983892, guid: bbe3bd42bf05245a79483257ca45c99b, type: 3}
+      propertyPath: upgrades.Array.data[3]
+      value: 
+      objectReference: {fileID: 11400000, guid: d523440858f7c431284a99319ff09ac1, type: 2}
+    - target: {fileID: 8015013780553983892, guid: bbe3bd42bf05245a79483257ca45c99b, type: 3}
+      propertyPath: upgrades.Array.data[4]
+      value: 
+      objectReference: {fileID: 11400000, guid: 365b93ce79c794aefaf3547dba2a2e9a, type: 2}
+    - target: {fileID: 8015013780553983892, guid: bbe3bd42bf05245a79483257ca45c99b, type: 3}
+      propertyPath: upgrades.Array.data[5]
+      value: 
+      objectReference: {fileID: 11400000, guid: 0e412ae6811c44100919c90c9054da29, type: 2}
+    - target: {fileID: 8015013780553983892, guid: bbe3bd42bf05245a79483257ca45c99b, type: 3}
+      propertyPath: upgrades.Array.data[6]
+      value: 
+      objectReference: {fileID: 11400000, guid: 0a123526ab253419e88f74057547057c, type: 2}
+    - target: {fileID: 8015013780553983892, guid: bbe3bd42bf05245a79483257ca45c99b, type: 3}
+      propertyPath: upgrades.Array.data[7]
+      value: 
+      objectReference: {fileID: 11400000, guid: dd4879475c5f44f3abcaa6ab962def08, type: 2}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
