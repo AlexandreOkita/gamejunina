@@ -2,7 +2,8 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public interface ISkill
+[CreateAssetMenu(menuName = "Game/Skills")]
+abstract public class ISkill: ScriptableObject
 {
-    void Cast();
+    abstract public void Cast();
 }
