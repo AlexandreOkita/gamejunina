@@ -14,7 +14,12 @@ public class ProjectileMovement : MonoBehaviour, ITeleportable
 
     void Start()
     {
-        LevelManager.Instance.NewLevelStarted += () =>
+        LevelManager.Instance.NewLevelStarted += (_) =>
+        {
+            StartDestroy();
+        };
+
+        GlobalEvents.Instance.OnDestroyProjectiles += () =>
         {
             StartDestroy();
         };

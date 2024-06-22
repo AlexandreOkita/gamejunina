@@ -9,7 +9,7 @@ public class LevelManager : MonoBehaviour
     [SerializeField] WaveManager waveManager;
     [SerializeField] UpgradesManager upgradesManager;
 
-    public Action NewLevelStarted;
+    public Action<int> NewLevelStarted;
 
     private int currentWave;
     private bool gameStarted = false;
@@ -49,8 +49,8 @@ public class LevelManager : MonoBehaviour
 
     private void OnWaveFinished()
     {
-        NewLevelStarted.Invoke();
         currentWave++;
+        NewLevelStarted.Invoke(currentWave);
         Debug.Log($"Começando próxima wave!!! - {currentWave}");
         StartCoroutine(StartNextWaveAfterDelay(5f));
         upgradesManager.ShowUpgrades();

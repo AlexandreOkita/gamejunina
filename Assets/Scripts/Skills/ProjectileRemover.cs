@@ -2,17 +2,10 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class ProjectileRemover : MonoBehaviour
+public class ProjectileRemover : ISkill
 {
-    // Start is called before the first frame update
-    void Start()
+    public void Cast()
     {
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
+        GlobalEvents.Instance.OnDestroyProjectiles.Invoke();
     }
 }

@@ -12,6 +12,7 @@ public class PlayerController : MonoBehaviour
     [SerializeField] Animator _playerAnimator;
     [SerializeField] PlayerAttributes _attributes;
     [SerializeField] SkillCaster skillCaster;
+    public SkillCaster SkillCaster => skillCaster;
 
     public PlayerAttributes Attributes => _attributes;
     public Health Health => _attributes.Health;
@@ -22,7 +23,7 @@ public class PlayerController : MonoBehaviour
         _playerAim.UpdateAttack(_initialWeapon);
         _attributes.Health.OnDeath += DisablePlayer;
         _attributes.Health.OnDeath += () => _playerAnimator.SetTrigger(DEAD_PARAMETER_HASH);
-        LevelManager.Instance.NewLevelStarted += () =>
+        LevelManager.Instance.NewLevelStarted += (_) =>
         {
             _attributes.Health.HealDamage(_attributes.Regen);
         };
