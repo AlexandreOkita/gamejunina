@@ -52,6 +52,8 @@ public class NewBehaviourScript : MonoBehaviour
         {
             if (!player.Health.IsAlive) continue;
 
+            if (player.IsInvisible) continue;
+
             float distance = Vector3.Distance(player.transform.position, currentPos);
             if (distance < minDistance)
             {

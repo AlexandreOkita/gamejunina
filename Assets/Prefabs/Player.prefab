@@ -401,6 +401,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _playerInput: {fileID: 4234014416239241472}
+  _player: {fileID: 4690522569415324653}
 --- !u!114 &6754425033645274195
 MonoBehaviour:
   m_ObjectHideFlags: 0

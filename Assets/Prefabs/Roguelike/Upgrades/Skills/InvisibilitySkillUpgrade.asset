@@ -1,0 +1,20 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 73e35e9683af4484db2de3ee2d771d83, type: 3}
+  m_Name: InvisibilitySkillUpgrade
+  m_EditorClassIdentifier: 
+  title: "Algu\xE9m me viu aqui?"
+  description: Deixe seus amigos resolverem seus problemas. Afinal, que come quieto
+    come mais!
+  sprite: {fileID: 21300000, guid: 71c34e3cab43d5e4bb569ef7cbabf633, type: 3}
+  sound: {fileID: 8300000, guid: fcc7207075a98cf4a819ab5f625399a8, type: 3}
+  skill: {fileID: 11400000, guid: 878cbd69912a74cc6b38a40cc410c52e, type: 2}

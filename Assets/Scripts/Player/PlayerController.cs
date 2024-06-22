@@ -1,3 +1,4 @@
+using System.Collections;
 using healthSystem;
 using UnityEngine;
 using UnityEngine.InputSystem;
@@ -18,6 +19,9 @@ public class PlayerController : MonoBehaviour
     public Health Health => _attributes.Health;
     public Color PlayerColor { get; private set; }
 
+    private bool _isInvisible = false;
+    public bool IsInvisible => _isInvisible;
+
     void Start()
     {
         _playerAim.UpdateAttack(_initialWeapon);
@@ -27,6 +31,18 @@ public class PlayerController : MonoBehaviour
         {
             _attributes.Health.HealDamage(_attributes.Regen);
         };
+    }
+
+    public void TurnOnInvisibility(float duration)
+    {
+        _isInvisible = true;
+        StartCoroutine(TurnOffInvisibilityAfterDelay(duration));
+    }
+
+    private IEnumerator TurnOffInvisibilityAfterDelay(float delay)
+    {
+        yield return new WaitForSeconds(delay);
+        _isInvisible = false;
     }
 
     void DisablePlayer()

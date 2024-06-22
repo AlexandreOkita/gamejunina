@@ -7,6 +7,7 @@ using UnityEngine.InputSystem;
 public class SkillCaster : MonoBehaviour
 {
     [SerializeField] PlayerInput _playerInput;
+    [SerializeField] PlayerController _player;
     private ISkill _slot1;
     private ISkill _slot2;
     private ISkill _slot3;
@@ -33,18 +34,18 @@ public class SkillCaster : MonoBehaviour
     void OnSkill1(InputValue value)
     {
         Debug.Log("Casting skill 1");
-        _slot1?.Cast();
+        _slot1?.Cast(_player);
     }
 
     void OnSkill2(InputValue value)
     {
         Debug.Log("Casting skill 2");
-        _slot2?.Cast();
+        _slot2?.Cast(_player);
     }
 
     void OnSkill3(InputValue value)
     {
         Debug.Log("Casting skill 3");
-        _slot3?.Cast();
+        _slot3?.Cast(_player);
     }
 }
