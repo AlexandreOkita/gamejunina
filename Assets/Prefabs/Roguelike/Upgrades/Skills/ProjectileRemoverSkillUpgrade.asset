@@ -14,6 +14,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   title: 'Poder: Limpa Telas'
   description: "Um al\xEDvio para voc\xEA e para seu computador."
-  sprite: {fileID: 21300000, guid: 71c34e3cab43d5e4bb569ef7cbabf633, type: 3}
+  sprite: {fileID: 21300000, guid: 0a8f8c12c1354427980a8d8205033db5, type: 3}
   sound: {fileID: 8300000, guid: fcc7207075a98cf4a819ab5f625399a8, type: 3}
   skill: {fileID: 11400000, guid: cc4a07f5692de403b9fbf15f4e13a10f, type: 2}

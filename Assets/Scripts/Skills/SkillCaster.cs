@@ -33,6 +33,7 @@ public class SkillCaster : MonoBehaviour
                 break;
         };
         _lastAddedSkill++;
+        _player.OnSkillAdded.Invoke(new Tuple<ISkill, int>(skill, slot));
     }
 
     void OnSkill1(InputValue value)

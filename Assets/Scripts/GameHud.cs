@@ -23,7 +23,7 @@ namespace DefaultNamespace
         public void ActivateHealthForPlayer(PlayerController playerController)
         {
             HealthHud healthHud = _healthHuds.First(hud => !hud.gameObject.activeSelf);
-            healthHud.Setup(playerController.Health, playerController.PlayerColor);
+            healthHud.Setup(playerController);
             healthHud.gameObject.SetActive(true);
         }
     }

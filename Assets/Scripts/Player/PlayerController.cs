@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using healthSystem;
 using UnityEngine;
@@ -19,6 +20,7 @@ public class PlayerController : MonoBehaviour
     public PlayerAttributes Attributes => _attributes;
     public Health Health => _attributes.Health;
     public Color PlayerColor { get; private set; }
+    public Action<Tuple<ISkill, int>> OnSkillAdded;
 
     private bool _isInvisible = false;
     public bool IsInvisible => _isInvisible;

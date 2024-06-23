@@ -12,4 +12,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: aa3a6129143f04bd48f0ac80f28377b5, type: 3}
   m_Name: Invisibility
   m_EditorClassIdentifier: 
+  _cooldown: 15
+  _sprite: {fileID: 21300000, guid: 7957a6b5270fe43cfad8503c4e101609, type: 3}
   duration: 5

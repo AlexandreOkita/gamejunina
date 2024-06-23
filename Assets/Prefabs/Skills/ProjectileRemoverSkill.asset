@@ -12,4 +12,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4d48a76ff119345558ca9b624b3637d4, type: 3}
   m_Name: ProjectileRemoverSkill
   m_EditorClassIdentifier: 
+  _cooldown: 15
+  _sprite: {fileID: 21300000, guid: 48ded52b7cee841968dd693220359352, type: 3}
   _particleSystem: {fileID: 2102315153827234629, guid: fd0969fa1683c4b08b9d80b91ef1663d, type: 3}
