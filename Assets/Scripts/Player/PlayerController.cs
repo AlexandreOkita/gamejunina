@@ -13,6 +13,7 @@ public class PlayerController : MonoBehaviour
     [SerializeField] Animator _playerAnimator;
     [SerializeField] PlayerAttributes _attributes;
     [SerializeField] SkillCaster skillCaster;
+    [SerializeField] SpriteRenderer _sprite;
     public SkillCaster SkillCaster => skillCaster;
 
     public PlayerAttributes Attributes => _attributes;
@@ -71,5 +72,27 @@ public class PlayerController : MonoBehaviour
         if (Time.timeScale < 0.1f) return;
 
         _playerAim.CurrentAttack.TryAttack(Attributes.AttackSpeed, Attributes.Attack);
+    }
+
+    public void StartBlink(float duration, float blinkInterval)
+    {
+        StartCoroutine(Blink(duration, blinkInterval));
+    }
+
+    private IEnumerator Blink(float duration, float blinkInterval)
+    {
+        float elapsed = 0f;
+        bool isVisible = true;
+
+        while (elapsed < duration)
+        {
+            isVisible = !isVisible;
+            _sprite.enabled = isVisible;
+
+            yield return new WaitForSeconds(blinkInterval);
+            elapsed += blinkInterval;
+        }
+
+        _sprite.enabled = true;
     }
 }

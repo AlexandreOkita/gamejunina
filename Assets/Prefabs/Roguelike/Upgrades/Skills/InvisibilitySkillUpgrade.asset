@@ -13,8 +13,7 @@ MonoBehaviour:
   m_Name: InvisibilitySkillUpgrade
   m_EditorClassIdentifier: 
   title: "Algu\xE9m me viu aqui?"
-  description: Deixe seus amigos resolverem seus problemas. Afinal, que come quieto
-    come mais!
+  description: "Existem dois tipos de problema: o seu, e o que n\xE3o \xE9 mais meu."
   sprite: {fileID: 21300000, guid: 71c34e3cab43d5e4bb569ef7cbabf633, type: 3}
   sound: {fileID: 8300000, guid: fcc7207075a98cf4a819ab5f625399a8, type: 3}
   skill: {fileID: 11400000, guid: 878cbd69912a74cc6b38a40cc410c52e, type: 2}

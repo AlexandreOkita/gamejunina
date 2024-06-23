@@ -245,6 +245,10 @@ MonoBehaviour:
   - {fileID: 0}
   - {fileID: 0}
   - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
   zombiePrefab: {fileID: 776893976640071234, guid: 91eacc06a105b473aa1f62eef8ead0dd, type: 3}
   skeletonPrefab: {fileID: 8045014169912576878, guid: 937a0f9908c16458daf92635d02f78f7, type: 3}
 --- !u!1 &7234464409654559266

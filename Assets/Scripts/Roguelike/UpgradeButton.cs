@@ -12,14 +12,7 @@ namespace Roguelike
         [SerializeField] TMP_Text description;
         [SerializeField] Image image;
         [SerializeField] Button button;
-
-        private AudioSource source;
-
-        // Start is called before the first frame update
-        private void Start()
-        {
-            source = GetComponent<AudioSource>();
-        }
+        [SerializeField] AudioSource _audioSource;
 
         public void Setup(AttributeUpgrade upgrade, PlayerController player, Action selected)
         {
@@ -29,8 +22,8 @@ namespace Roguelike
             button.onClick.RemoveAllListeners();
             button.onClick.AddListener(() =>
             {
-                source.clip = upgrade.sound;
-                source.Play();
+                _audioSource.clip = upgrade.sound;
+                _audioSource.Play();
                 upgrade.Apply(player);
                 selected?.Invoke();
             });
