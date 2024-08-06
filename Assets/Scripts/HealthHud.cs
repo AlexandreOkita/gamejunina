@@ -1,4 +1,6 @@
 using System;
+using System.Collections;
+using System.Linq;
 using healthSystem;
 using TMPro;
 using UnityEngine;
@@ -12,11 +14,13 @@ namespace DefaultNamespace
         [SerializeField] Image _healthBar;
         [SerializeField] TMP_Text _lifeText;
         [SerializeField] System.Collections.Generic.List<Image> _skillSlots;
+        private System.Collections.Generic.List<Tuple<float, float>> _slotsCooldown;
 
         Health _bindedHealth;
 
         public void Setup(PlayerController player)
         {
+            _slotsCooldown = Enumerable.Repeat(new Tuple<float, float>(0, 0), _skillSlots.Count()).ToList();
             _healthUi.sizeDelta = new Vector2( 32f, _healthUi.sizeDelta.y);
             _bindedHealth = player.Health;
             _healthBar.color = player.PlayerColor;
@@ -28,13 +32,27 @@ namespace DefaultNamespace
             {
                 AddSkill(skillSlotPair.Item1, skillSlotPair.Item2);
             };
+            player.OnSkillUsed += (skillSlotPair) =>
+            {
+                StartCoroutine(UseSkill(skillSlotPair.Item1, skillSlotPair.Item2, 0));
+            };
         }
 
-        public void AddSkill(ISkill skill, int slot)
+        private IEnumerator UseSkill(ISkill skill, int slot, float currentCooldown)
         {
-            Image skillSlot = _skillSlots[(slot) % 3];
+            if (currentCooldown > skill.Cooldown) yield break;
+            _skillSlots[slot].fillAmount = currentCooldown / skill.Cooldown;
+            yield return new WaitForSeconds(1f);
+            currentCooldown += 1;
+            StartCoroutine(UseSkill(skill, slot, currentCooldown));
+        }
+
+        void AddSkill(ISkill skill, int slot)
+        {
+            Image skillSlot = _skillSlots[slot];
             skillSlot.sprite = skill.Sprite;
             skillSlot.gameObject.SetActive(true);
+            _slotsCooldown[slot] = new Tuple<float, float>(skill.Cooldown, skill.Cooldown);
         }
 
         void UpdateUi(float _)

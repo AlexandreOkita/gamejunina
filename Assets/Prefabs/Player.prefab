@@ -338,6 +338,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   maxHealthBase: 100
   isPlayer: 1
+  reviveTax: 0.4
 --- !u!114 &1498499136287240345
 MonoBehaviour:
   m_ObjectHideFlags: 0

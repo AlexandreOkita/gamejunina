@@ -48,6 +48,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 3269000946341960988, guid: f16577586fa234d7fb5f843dadca892b, type: 3}
     - target: {fileID: 5332151415770736996, guid: 13c76dd4382ba445b8aae434fce737e8, type: 3}
+      propertyPath: attackCooldown
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 5332151415770736996, guid: 13c76dd4382ba445b8aae434fce737e8, type: 3}
       propertyPath: launchPoints.Array.size
       value: 1
       objectReference: {fileID: 0}

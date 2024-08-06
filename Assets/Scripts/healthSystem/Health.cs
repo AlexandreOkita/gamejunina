@@ -8,6 +8,7 @@ namespace healthSystem
     {
         [SerializeField] private float maxHealthBase;
         [SerializeField] private bool isPlayer;
+        [SerializeField] private float reviveTax = 0.4f;
 
         public event Action<float> OnDamageReceived;
         public event Action OnDeath;
@@ -44,6 +45,11 @@ namespace healthSystem
             currentMaxHealth = val;
             CurrentHealth += diff;
             OnMaxHealthUpdated?.Invoke(val);
+        }
+
+        public void Revive()
+        {
+            CurrentHealth = currentMaxHealth * reviveTax;
         }
 
         public void HealDamage(float heal)

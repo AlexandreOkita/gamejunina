@@ -39,19 +39,19 @@ public class SkillCaster : MonoBehaviour
     void OnSkill1(InputValue value)
     {
         Debug.Log("Casting skill 1");
-        CastSkill(_slot1, _slot1Loading, 1);
+        CastSkill(_slot1, _slot1Loading, 0);
     }
 
     void OnSkill2(InputValue value)
     {
         Debug.Log("Casting skill 2");
-        CastSkill(_slot2, _slot2Loading, 2);
+        CastSkill(_slot2, _slot2Loading, 1);
     }
 
     void OnSkill3(InputValue value)
     {
         Debug.Log("Casting skill 3");
-        CastSkill(_slot3, _slot3Loading, 3);
+        CastSkill(_slot3, _slot3Loading, 2);
     }
 
     private void CastSkill(ISkill skill, bool loading, int slotNumber)
@@ -60,6 +60,7 @@ public class SkillCaster : MonoBehaviour
         {
             skill?.Cast(_player);
             StartCoroutine(LoadSkill(slotNumber, skill.Cooldown));
+            _player.OnSkillUsed.Invoke(new Tuple<ISkill, int>(skill, slotNumber));
         }
     }
 
@@ -68,13 +69,13 @@ public class SkillCaster : MonoBehaviour
 
         switch (slot)
         {
-            case 1:
+            case 0:
                 _slot1Loading = true;
                 break;
-            case 2:
+            case 1:
                 _slot2Loading = true;
                 break;
-            case 3:
+            case 2:
                 _slot3Loading = true;
                 break;
         }
@@ -83,13 +84,13 @@ public class SkillCaster : MonoBehaviour
 
         switch (slot)
         {
-            case 1:
+            case 0:
                 _slot1Loading = false;
                 break;
-            case 2:
+            case 1:
                 _slot2Loading = false;
                 break;
-            case 3:
+            case 2:
                 _slot3Loading = false;
                 break;
         }

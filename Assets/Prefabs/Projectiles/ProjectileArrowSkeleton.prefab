@@ -65,12 +65,24 @@ PrefabInstance:
       value: 
       objectReference: {fileID: -37465136, guid: 84bf08281b21043c48522139a2ee1013, type: 3}
     - target: {fileID: 5032107089298473117, guid: eb4c32e600aae4b05a474384ef25f564, type: 3}
+      propertyPath: m_Color.b
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5032107089298473117, guid: eb4c32e600aae4b05a474384ef25f564, type: 3}
+      propertyPath: m_Color.g
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5032107089298473117, guid: eb4c32e600aae4b05a474384ef25f564, type: 3}
+      propertyPath: m_Color.r
+      value: 0.9433962
+      objectReference: {fileID: 0}
+    - target: {fileID: 5032107089298473117, guid: eb4c32e600aae4b05a474384ef25f564, type: 3}
       propertyPath: m_WasSpriteAssigned
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6818224666558363628, guid: eb4c32e600aae4b05a474384ef25f564, type: 3}
       propertyPath: speed
-      value: 8
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 6818224666558363628, guid: eb4c32e600aae4b05a474384ef25f564, type: 3}
       propertyPath: damage

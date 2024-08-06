@@ -21,8 +21,10 @@ public class PlayerController : MonoBehaviour
     public Health Health => _attributes.Health;
     public Color PlayerColor { get; private set; }
     public Action<Tuple<ISkill, int>> OnSkillAdded;
+    public Action<Tuple<ISkill, int>> OnSkillUsed;
 
     private bool _isInvisible = false;
+    private bool _isEnabled = true;
     public bool IsInvisible => _isInvisible;
 
     void Start()
@@ -33,6 +35,10 @@ public class PlayerController : MonoBehaviour
         LevelManager.Instance.NewLevelStarted += (_) =>
         {
             _attributes.Health.HealDamage(_attributes.Regen);
+            if (!_isEnabled)
+            {
+                EnablePlayer();
+            }
         };
     }
 
@@ -53,6 +59,16 @@ public class PlayerController : MonoBehaviour
         _attributes.Movement.enabled = false;
         _playerAim.AimParent.gameObject.SetActive(false);
         _playerAim.enabled = false;
+        _isEnabled = false;
+    }
+
+    void EnablePlayer()
+    {
+        _isEnabled = true;
+        _attributes.Movement.enabled = true;
+        _playerAim.AimParent.gameObject.SetActive(true);
+        _playerAim.enabled = true;
+        _attributes.Health.Revive();
     }
 
     public void Setup(PlayerData playerData, Bounds playerBounds)
